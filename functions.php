@@ -26,7 +26,7 @@ register_sidebar( array(
 add_action( 'wp_enqueue_scripts', 'add_base_child_css' );
 
 function add_base_child_css() {
-	wp_enqueue_style( 'base-css', get_stylesheet_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'base-child', get_stylesheet_directory_uri() . '/style.css' );
 }
 
 
