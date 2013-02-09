@@ -71,47 +71,5 @@ function add_header_image_as_logo() {
 			);
 }
 
-function base_time_diff( $from, $to = '', $limit = 1 ) {
-	
-	// Since all months/years aren't the same, these values are what Google's calculator says
-	$units = apply_filters( 'time_units', array(
-			31556926 => array( __('%s year'),  __('%s years') ),
-			2629744  => array( __('%s month'), __('%s months') ),
-			604800   => array( __('%s week'),  __('%s weeks') ),
-			86400    => array( __('%s day'),   __('%s days') ),
-			3600     => array( __('%s hour'),  __('%s hours') ),
-			60       => array( __('%s min'),   __('%s minutes') ),
-	) );
-
-	if ( empty($to) )
-		$to = time();
-
-	$from = (int) $from;
-	$to   = (int) $to;
-	$diff = (int) abs( $to - $from );
-
-	$items = 0;
-	$output = array();
-
-	foreach ( $units as $unitsec => $unitnames ) {
-			if ( $items >= $limit )
-					break;
-
-			if ( $diff < $unitsec )
-					continue;
-
-			$numthisunits = floor( $diff / $unitsec );
-			$diff = $diff - ( $numthisunits * $unitsec );
-			$items++;
-
-			if ( $numthisunits > 0 )
-					$output[] = sprintf( _n( $unitnames[0], $unitnames[1], $numthisunits ), $numthisunits );
-	}
-
-	if ( !empty($output) )
-		return implode( _x( ', ', 'human_time_diff' ), $output );
-	else
-		return sprintf( current( array_pop( $units ) ), 1 );
-}
 
 
