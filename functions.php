@@ -45,16 +45,6 @@ function base_page_title( $title, $sep ) {
 }
 
 
-add_action( 'body_class', 'add_header_logo_image_class' );
-
-function add_header_logo_image_class( $classes ) {
-	if ( get_header_image() )
-		$classes[] = 'image-as-logo';
-
-	return $classes;
-}
-
-
 add_filter( 'previous_posts_link_attributes', 'base_pagination_rel_prev' );
 
 function base_pagination_rel_prev() {
