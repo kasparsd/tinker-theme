@@ -9,6 +9,8 @@ add_theme_support(
 	)
 );
 
+add_post_type_support( 'page', 'excerpt' );
+
 register_sidebar( array(
 	'id' => 'sidebar',
 	'name' => __( 'Sidebar' ),
