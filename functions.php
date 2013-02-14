@@ -1,8 +1,13 @@
 <?php
 
-add_theme_support( 'custom-header', array(
+add_theme_support( 'post-thumbnails' );
+
+add_theme_support( 
+	'custom-header', 
+	array(
 		'header-text' => false
-	) );
+	)
+);
 
 register_sidebar( array(
 	'id' => 'sidebar',
@@ -22,6 +27,24 @@ register_sidebar( array(
 	'after_title' => '</h4>',
 ) );
 
+add_action( 'wp_head', 'add_head_feed_link', 8 );
+
+function add_head_feed_link() {
+	printf(
+		'<link rel="alternate" type="application/rss+xml" title="%s" href="%s" />',
+		esc_attr( sprintf( '%s RSS feed', get_bloginfo('name') ) ),
+		get_bloginfo('rss2_url')
+	);
+}
+
+add_action( 'wp_head', 'add_head_favicon', 8 );
+
+function add_head_favicon() {
+	printf(
+		'<link rel="icon" type="image/png" href="%s/images/favicon.png" />',
+		get_stylesheet_directory_uri()
+	);
+}
 
 add_action( 'wp_enqueue_scripts', 'add_base_child_css' );
 
