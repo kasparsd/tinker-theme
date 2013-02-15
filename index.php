@@ -13,6 +13,8 @@
 		</h2>
 		<?php endif; ?>
 
+		<?php do_action( 'after_post_title' ) ?>
+
 		<div class="entry-content">
 			 <?php get_template_part( 'content', get_post_type() );  ?>
 		</div>
