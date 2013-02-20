@@ -48,6 +48,13 @@ function add_head_favicon() {
 	);
 }
 
+add_action( 'wp_head', 'make_search_notfound_noindex' );
+
+function make_search_notfound_noindex() {
+	if ( is_search() || is_404() )
+		echo '<meta name="robots" content="noindex" />';
+}
+
 add_action( 'wp_enqueue_scripts', 'add_base_child_css' );
 
 function add_base_child_css() {
