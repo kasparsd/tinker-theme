@@ -6,11 +6,11 @@
 		<?php do_action( 'post_header' ) ?>
 		
 		<?php if ( get_the_title() ) : ?>
-		<h2 class="entry-title" role="heading">
+		<h1 class="entry-title" role="heading">
 			<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 				<?php the_title(); ?>
 			</a>
-		</h2>
+		</h1>
 		<?php endif; ?>
 
 		<?php do_action( 'after_post_title' ) ?>
