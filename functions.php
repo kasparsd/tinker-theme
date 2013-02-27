@@ -68,7 +68,7 @@ function base_page_title( $title, $sep ) {
 	$sep = apply_filters( 'base_title_sep', $sep );
 
 	if ( is_front_page() )
-		$title = sprintf( '%s %s %s', get_bloginfo( 'name' ), $sep, get_bloginfo( 'description' ) );
+		return sprintf( '%s %s %s', get_bloginfo( 'name' ), $sep, get_bloginfo( 'description' ) );
 
 	if ( ! is_feed() )
 		$title .= get_bloginfo( 'name' );
