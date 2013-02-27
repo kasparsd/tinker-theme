@@ -16,8 +16,8 @@ register_sidebar( array(
 	'name' => __( 'Sidebar' ),
 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 	'after_widget' => '</aside>',
-	'before_title' => '<h4 class="widget-title">',
-	'after_title' => '</h4>',
+	'before_title' => '<h1 class="widget-title">',
+	'after_title' => '</h1>',
 ) );
 
 register_sidebar( array(
@@ -25,8 +25,8 @@ register_sidebar( array(
 	'name' => __( 'Footer' ),
 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 	'after_widget' => '</aside>',
-	'before_title' => '<h4 class="widget-title">',
-	'after_title' => '</h4>',
+	'before_title' => '<h1 class="widget-title">',
+	'after_title' => '</h1>',
 ) );
 
 add_action( 'wp_head', 'add_head_feed_link', 8 );
