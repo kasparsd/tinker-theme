@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" role="article">
 		
 		<?php do_action( 'post_header' ) ?>
 		
 		<?php if ( get_the_title() ) : ?>
-		<h2 class="entry-title">
+		<h2 class="entry-title" role="heading">
 			<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 				<?php the_title(); ?>
 			</a>

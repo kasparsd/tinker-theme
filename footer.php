@@ -8,7 +8,7 @@
 	</div><!-- wrap -->
 
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-	<div class="wrap wrap-sidebar">
+	<div class="wrap wrap-sidebar" role="complementary">
 		<div id="sidebar">
 			<?php dynamic_sidebar( 'sidebar' ); ?>
 		</div>
@@ -18,7 +18,7 @@
 	<?php do_action( 'before_footer' ); ?>
 
 	<?php if ( is_active_sidebar( 'footer-area' ) ) : ?>
-	<div class="wrap wrap-footer">
+	<div class="wrap wrap-footer" role="contentinfo">
 		<nav id="footer">
 			<?php dynamic_sidebar( 'footer-area' ); ?>
 		</nav>

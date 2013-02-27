@@ -11,10 +11,10 @@
 
 <div id="soul">
 	<div class="wrap wrap-header">
-		<nav id="header">
+		<nav id="header" role="navigation">
 			<?php do_action( 'header_before' ); ?>
 
-			<p id="logo">
+			<p id="logo" role="banner">
 				<a href="<?php echo home_url('/') ?>">
 					<?php do_action('logo_image'); ?>
 					<strong><?php bloginfo('name'); ?></strong>
@@ -30,5 +30,5 @@
 
 		<?php do_action( 'content_before' ); ?>
 
-		<div id="content-main" class="hfeed">
+		<div id="content-main" class="hfeed" role="main">
 
