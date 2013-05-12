@@ -89,7 +89,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .post pre, .page pre { font-size:0.9em; background:#eee; padding:0.5em 1em; overflow:auto; overflow-y:none; }
 
 .pagination { vertical-align:middle; display:block; float:left; width:100%; margin-bottom:3em; clear:both; text-align:center; }
-.pagination .links { font-size:1.1em; }
+.pagination .links { font-weight:bold; font-size:1.1em; }
 .pagination .status { margin-left:2em; }
 .pagination a { color:inherit; padding:1em 0.75em; }
 
