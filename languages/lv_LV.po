@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tinker Theme for WordPress\n"
+"POT-Creation-Date: 2013-05-12 21:33+0100\n"
+"PO-Revision-Date: 2013-05-12 21:33+0100\n"
+"Last-Translator: Kaspars <kaspars@konstruktors.com>\n"
+"Language-Team:  <kaspars@konstruktors.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:15 ../inc/theme-parts.php:74
+msgid "One Comment"
+msgstr "Viens komentārs"
+
+#: ../comments.php:31
+msgid "Comments are closed."
+msgstr "Komentāri ir slēgti"
+
+#: ../inc/theme-admin.php:6
+msgid "Hide gravatar in the header"
+msgstr ""
+
+#: ../inc/theme-admin.php:11
+msgid "Hide breadcrumbs"
+msgstr ""
+
+#: ../inc/theme-admin.php:16
+msgid "Hide footer menu"
+msgstr ""
+
+#: ../inc/theme-admin.php:24
+msgid "Link color"
+msgstr "Saišu krāsa"
+
+#: ../inc/theme-admin.php:31
+msgid "Header text color"
+msgstr "Galvenes teksta krāsa"
+
+#: ../inc/theme-admin.php:38
+msgid "Background color"
+msgstr "Fona krāsa"
+
+#: ../inc/theme-admin.php:45
+msgid "Text color"
+msgstr "Teksta krāsa"
+
+#: ../inc/theme-admin.php:52
+msgid "Headline color"
+msgstr "Virsrakstu krāsa"
+
+#: ../inc/theme-admin.php:69
+msgid "Colors"
+msgstr "Krāsas"
+
+#: ../inc/theme-admin.php:70
+msgid "Choose background and text color."
+msgstr "Izvēlies fona un teksta krāsu."
+
+#: ../inc/theme-admin.php:94
+msgid "Theme Elements"
+msgstr "Tēmas elementi"
+
+#: ../inc/theme-admin.php:95
+msgid "Enable or disable certain theme elements."
+msgstr "Iespējo vai atspējo konkrētus tēmas elementus."
+
+#: ../inc/theme-features.php:24
+#, php-format
+msgid "%s RSS feed"
+msgstr "%s RSS barotne"
+
+#: ../inc/theme-parts.php:46
+msgid "&larr; Previous"
+msgstr "&larr; Iepriekšējā"
+
+#: ../inc/theme-parts.php:47
+msgid "Next &rarr;"
+msgstr "Nākamā &rarr;"
+
+#: ../inc/theme-parts.php:76
+msgid "Add Comment"
+msgstr "Pievieno komentāru"
+
+#: ../inc/theme-parts.php:118
+msgid "Home"
+msgstr "Sākums"
+
+#: ../inc/theme-parts.php:144
+msgid "&larr; Newer"
+msgstr "&larr; Jaunāki"
+
+#: ../inc/theme-parts.php:147
+msgid "Older &rarr;"
+msgstr "Vecāki &rarr;"
+
+#: ../inc/theme-parts.php:157
+#, php-format
+msgid "Page %d of %d"
+msgstr "%d. lapa no %d"
+
+#: ../inc/theme-parts.php:169
+msgid "Read more &rarr;"
+msgstr "Lasīt tālāk &rarr;"
+
+#: ../inc/theme-setup.php:19
+msgid "Footer"
+msgstr "Kājene"
