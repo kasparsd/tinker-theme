@@ -24,12 +24,12 @@ img { background:#ddd; }
 .wrap-header { float:left; width:100%; clear:both; padding:2em 0; }
 #header { color:inherit; }
 
-#logo { float:left; line-height:1; margin:0 1em 0 0; padding:0 1em 1.5em 0; }
+#logo { float:left; line-height:1; margin:0 1em 0 0; padding:0 0 1.5em 0; }
 #logo a { font-size:2em; color:inherit; display:block; padding:1em; margin:-1em 0 -1em -1em; position:relative; z-index:2; }
 #logo em { font-size:0.9em; font-style:normal; padding-top:0.3em; margin-left:0.1em; display:block; }
-#logo img { float:left; position:relative; left:-60px; margin:-8px -10em 0 0; background:#fff; }
+#logo img { float:left; margin:-0.2em 0.5em 0 0; border-radius:4px; border:none; }
 
-#nav-main { float:right; margin:0 -1em 0 0; padding:0; line-height:1; }
+#nav-main { float:right; margin:1.4em -1em 0 0; padding:0; line-height:1; }
 #nav-main ul, #nav-main li { list-style:none; display:block; margin:0; padding:0; }
 #nav-main li { float:left; }
 #nav-main a { color:inherit; display:block; padding:0.8em 1em; }
@@ -51,7 +51,7 @@ img { background:#ddd; }
 .section-header { font-size:1em; display:block; margin:-0.75em 0 2em 0; }
 
 #content-main article, 
-#content-main article { padding:0.5em 25px; background:#fff; margin-bottom:2.5em; position:relative; }
+#content-main article { padding:0.5em 25px; background-color:#fff; margin-bottom:2.5em; position:relative; border-radius:4px; }
 
 .post-featured-header, 
 article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; padding-left:25px; padding-right:25px; }
@@ -90,7 +90,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .pagination { vertical-align:middle; display:block; float:left; width:100%; margin-bottom:3em; clear:both; text-align:center; }
 .pagination .links { font-size:1.1em; }
 .pagination .status { margin-left:2em; }
-.pagination a { padding:1em 0.75em; }
+.pagination a { color:inherit; padding:1em 0.75em; }
 
 .comments-wrap { float:left; width:100%; clear:both; background:#fff; margin-bottom:3em; }
 .comments { padding:0 25px; }
