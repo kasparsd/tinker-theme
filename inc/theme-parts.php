@@ -154,7 +154,7 @@ function tinklog_pagination() {
 				<span class="status">%s</span>
 			</nav>', 
 			implode( '', $nav ),
-			sprintf( __( 'Page %d of %d' ), $paged, $wp_query->max_num_pages )
+			sprintf( __( 'Page %d of %d', 'tinker' ), $paged, $wp_query->max_num_pages )
 		);
 }
 
