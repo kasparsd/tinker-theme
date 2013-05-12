@@ -1,6 +1,3 @@
 <?php
 
-if ( is_archive() || is_home() )
-	the_excerpt();
-else
-	the_content();
+the_content( str_replace( ' ', '&nbsp;', __( 'Read more &rarr;', 'tinker' ) ) );
