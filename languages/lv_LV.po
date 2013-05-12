@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tinker Theme for WordPress\n"
-"POT-Creation-Date: 2013-05-12 21:33+0100\n"
-"PO-Revision-Date: 2013-05-12 21:33+0100\n"
+"POT-Creation-Date: 2013-05-13 00:14+0100\n"
+"PO-Revision-Date: 2013-05-13 00:14+0100\n"
 "Last-Translator: Kaspars <kaspars@konstruktors.com>\n"
 "Language-Team:  <kaspars@konstruktors.com>\n"
 "Language: English\n"
@@ -21,53 +21,65 @@ msgstr "Viens komentārs"
 
 #: ../comments.php:31
 msgid "Comments are closed."
-msgstr "Komentāri ir slēgti"
+msgstr "Komentāri ir slēgti."
+
+#: ../content.php:3 ../inc/theme-parts.php:177
+msgid "Read more &rarr;"
+msgstr "Lasīt tālāk &rarr;"
+
+#: ../search.php:8
+msgid "Search Results"
+msgstr "Meklēšanas rezultāti"
+
+#: ../search.php:25
+msgid "Sorry, but nothing matched your search criteria."
+msgstr "Atvaino, bet nekas netika atrasts."
 
 #: ../inc/theme-admin.php:6
-msgid "Hide gravatar in the header"
-msgstr ""
+msgid "Hide Gravatar image in the header"
+msgstr "Paslēpt Gravatar attēlu galvenē"
 
 #: ../inc/theme-admin.php:11
 msgid "Hide breadcrumbs"
-msgstr ""
+msgstr "Paslēpt \"breadcrumbs\""
 
 #: ../inc/theme-admin.php:16
 msgid "Hide footer menu"
-msgstr ""
+msgstr "Paslēpt kājenes izvēlni"
 
 #: ../inc/theme-admin.php:24
-msgid "Link color"
-msgstr "Saišu krāsa"
+msgid "Links"
+msgstr "Saites"
 
 #: ../inc/theme-admin.php:31
-msgid "Header text color"
-msgstr "Galvenes teksta krāsa"
+msgid "Header text"
+msgstr "Teksts galvenē"
 
 #: ../inc/theme-admin.php:38
-msgid "Background color"
-msgstr "Fona krāsa"
+msgid "Background"
+msgstr "Fons"
 
 #: ../inc/theme-admin.php:45
-msgid "Text color"
-msgstr "Teksta krāsa"
+msgid "Text"
+msgstr "Teksts"
 
 #: ../inc/theme-admin.php:52
-msgid "Headline color"
-msgstr "Virsrakstu krāsa"
+msgid "Headlines"
+msgstr "Virsraksti"
 
-#: ../inc/theme-admin.php:69
+#: ../inc/theme-admin.php:73
 msgid "Colors"
 msgstr "Krāsas"
 
-#: ../inc/theme-admin.php:70
+#: ../inc/theme-admin.php:74
 msgid "Choose background and text color."
 msgstr "Izvēlies fona un teksta krāsu."
 
-#: ../inc/theme-admin.php:94
-msgid "Theme Elements"
-msgstr "Tēmas elementi"
+#: ../inc/theme-admin.php:102
+msgid "Header & Footer"
+msgstr "Galvene un kājene"
 
-#: ../inc/theme-admin.php:95
+#: ../inc/theme-admin.php:103
 msgid "Enable or disable certain theme elements."
 msgstr "Iespējo vai atspējo konkrētus tēmas elementus."
 
@@ -76,11 +88,11 @@ msgstr "Iespējo vai atspējo konkrētus tēmas elementus."
 msgid "%s RSS feed"
 msgstr "%s RSS barotne"
 
-#: ../inc/theme-parts.php:46
+#: ../inc/theme-parts.php:46 ../inc/theme-parts.php:148
 msgid "&larr; Previous"
 msgstr "&larr; Iepriekšējā"
 
-#: ../inc/theme-parts.php:47
+#: ../inc/theme-parts.php:47 ../inc/theme-parts.php:148
 msgid "Next &rarr;"
 msgstr "Nākamā &rarr;"
 
@@ -88,27 +100,32 @@ msgstr "Nākamā &rarr;"
 msgid "Add Comment"
 msgstr "Pievieno komentāru"
 
-#: ../inc/theme-parts.php:118
+#: ../inc/theme-parts.php:121
 msgid "Home"
 msgstr "Sākums"
 
-#: ../inc/theme-parts.php:144
-msgid "&larr; Newer"
-msgstr "&larr; Jaunāki"
-
-#: ../inc/theme-parts.php:147
+#: ../inc/theme-parts.php:150
 msgid "Older &rarr;"
 msgstr "Vecāki &rarr;"
 
-#: ../inc/theme-parts.php:157
+#: ../inc/theme-parts.php:150
+msgid "&larr; Newer"
+msgstr "&larr; Jaunāki"
+
+#: ../inc/theme-parts.php:165
 #, php-format
 msgid "Page %d of %d"
 msgstr "%d. lapa no %d"
 
-#: ../inc/theme-parts.php:169
-msgid "Read more &rarr;"
-msgstr "Lasīt tālāk &rarr;"
-
 #: ../inc/theme-setup.php:19
 msgid "Footer"
 msgstr "Kājene"
+
+#~ msgid "Theme Elements"
+#~ msgstr "Tēmas elementi"
+
+#~ msgid "Link color"
+#~ msgstr "Saišu krāsa"
+
+#~ msgid "Text color"
+#~ msgstr "Teksta krāsa"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tinker Theme for WordPress\n"
-"POT-Creation-Date: 2013-05-12 21:25+0100\n"
-"PO-Revision-Date: 2013-05-12 21:26+0100\n"
+"POT-Creation-Date: 2013-05-13 00:13+0100\n"
+"PO-Revision-Date: 2013-05-13 00:13+0100\n"
 "Last-Translator: Kaspars <kaspars@konstruktors.com>\n"
 "Language-Team:  <kaspars@konstruktors.com>\n"
 "Language: English\n"
@@ -23,8 +23,20 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: ../content.php:3 ../inc/theme-parts.php:177
+msgid "Read more &rarr;"
+msgstr ""
+
+#: ../search.php:8
+msgid "Search Results"
+msgstr ""
+
+#: ../search.php:25
+msgid "Sorry, but nothing matched your search criteria."
+msgstr ""
+
 #: ../inc/theme-admin.php:6
-msgid "Hide gravatar in the header"
+msgid "Hide Gravatar image in the header"
 msgstr ""
 
 #: ../inc/theme-admin.php:11
@@ -36,38 +48,38 @@ msgid "Hide footer menu"
 msgstr ""
 
 #: ../inc/theme-admin.php:24
-msgid "Link color"
+msgid "Links"
 msgstr ""
 
 #: ../inc/theme-admin.php:31
-msgid "Header text color"
+msgid "Header text"
 msgstr ""
 
 #: ../inc/theme-admin.php:38
-msgid "Background color"
+msgid "Background"
 msgstr ""
 
 #: ../inc/theme-admin.php:45
-msgid "Text color"
+msgid "Text"
 msgstr ""
 
 #: ../inc/theme-admin.php:52
-msgid "Headline color"
+msgid "Headlines"
 msgstr ""
 
-#: ../inc/theme-admin.php:69
+#: ../inc/theme-admin.php:73
 msgid "Colors"
 msgstr ""
 
-#: ../inc/theme-admin.php:70
+#: ../inc/theme-admin.php:74
 msgid "Choose background and text color."
 msgstr ""
 
-#: ../inc/theme-admin.php:94
-msgid "Theme Elements"
+#: ../inc/theme-admin.php:102
+msgid "Header & Footer"
 msgstr ""
 
-#: ../inc/theme-admin.php:95
+#: ../inc/theme-admin.php:103
 msgid "Enable or disable certain theme elements."
 msgstr ""
 
@@ -76,11 +88,11 @@ msgstr ""
 msgid "%s RSS feed"
 msgstr ""
 
-#: ../inc/theme-parts.php:46
+#: ../inc/theme-parts.php:46 ../inc/theme-parts.php:148
 msgid "&larr; Previous"
 msgstr ""
 
-#: ../inc/theme-parts.php:47
+#: ../inc/theme-parts.php:47 ../inc/theme-parts.php:148
 msgid "Next &rarr;"
 msgstr ""
 
@@ -88,25 +100,21 @@ msgstr ""
 msgid "Add Comment"
 msgstr ""
 
-#: ../inc/theme-parts.php:118
+#: ../inc/theme-parts.php:121
 msgid "Home"
 msgstr ""
 
-#: ../inc/theme-parts.php:144
-msgid "&larr; Newer"
-msgstr ""
-
-#: ../inc/theme-parts.php:147
+#: ../inc/theme-parts.php:150
 msgid "Older &rarr;"
 msgstr ""
 
-#: ../inc/theme-parts.php:157
-#, php-format
-msgid "Page %d of %d"
+#: ../inc/theme-parts.php:150
+msgid "&larr; Newer"
 msgstr ""
 
-#: ../inc/theme-parts.php:169
-msgid "Read more &rarr;"
+#: ../inc/theme-parts.php:165
+#, php-format
+msgid "Page %d of %d"
 msgstr ""
 
 #: ../inc/theme-setup.php:19
