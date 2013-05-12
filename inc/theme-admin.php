@@ -3,7 +3,7 @@
 $tinker_filters = array(
 		'maybe_add_blog_avatar' => array( 
 			'hook' => 'logo_image', 
-			'label' => __( 'Hide gravatar in the header', 'tinker' ),
+			'label' => __( 'Hide Gravatar image in the header', 'tinker' ),
 			'default' => false
 		),
 		'tinklog_breadcrumb' => array( 
@@ -21,35 +21,35 @@ $tinker_filters = array(
 
 $tinker_colors = array(
 		'link-color' => array( 
-			'label' => __( 'Link color', 'tinker' ),
+			'label' => __( 'Links', 'tinker' ),
 			'default' => '#1e73be',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'dom' => 'a',
 			'css' => 'color'
 		),
 		'header-color' => array( 
-			'label' => __( 'Header text color', 'tinker' ),
+			'label' => __( 'Header text', 'tinker' ),
 			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'dom' => '#header, .breadcrumbs, .pagination, .wrap-footer',
 			'css' => 'color'
 		),
 		'background-color' => array(
-			'label' => __( 'Background color', 'tinker' ),
+			'label' => __( 'Background', 'tinker' ),
 			'default' => '#eeeeee',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'dom' => 'body',
 			'css' => 'background-color'
 		),
 		'text-color' => array( 
-			'label' => __( 'Text color', 'tinker' ),
+			'label' => __( 'Text', 'tinker' ),
 			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'dom' => 'body',
 			'css' => 'color'
 		),
 		'headline-color' => array( 
-			'label' => __( 'Headline color', 'tinker' ),
+			'label' => __( 'Headlines', 'tinker' ),
 			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'dom' => 'article .entry-title',
@@ -63,6 +63,10 @@ add_action( 'customize_register', 'tinker_customizer' );
 function tinker_customizer( $wp_customize ) {
 	global $tinker_filters, $tinker_colors;
 
+	/**
+	 * Theme color options
+	 */
+	
 	$wp_customize->add_section(
 		'tinker-colors',
 		array(
@@ -88,11 +92,15 @@ function tinker_customizer( $wp_customize ) {
 		);
 	}
 
+	/**
+	 * Turn regular WordPress actions into theme options
+	 */
+	
 	$wp_customize->add_section(
 		'tinker-elements',
 		array(
-			'title' => __( 'Theme Elements', 'tinker' ),
-			'description' => __( 'Enable or disable certain theme elements.' ),
+			'title' => __( 'Header & Footer', 'tinker' ),
+			'description' => __( 'Enable or disable certain theme elements.', 'tinker' ),
 			'priority' => 40
 		)
 	);
