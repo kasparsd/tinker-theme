@@ -89,6 +89,15 @@ function add_post_meta_header() {
 }
 
 
+add_action( 'logo_image', 'maybe_add_blog_avatar' );
+
+function maybe_add_blog_avatar() {
+	$admin_email = get_option( 'admin_email' );
+
+	echo get_avatar( $admin_email, 64 );
+}
+
+
 // Use WordPress SEO breadcrumbs if plugin installed
 if ( function_exists( 'yoast_breadcrumb' ) )
 	add_action( 'content_before', 'tinklog_yoast_breadcrumb' );
