@@ -52,7 +52,7 @@ $tinker_colors = array(
 			'label' => __( 'Headline color', 'tinker' ),
 			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'dom' => 'article .entry-title a',
+			'dom' => 'article .entry-title',
 			'css' => 'color'
 		)
 	);
