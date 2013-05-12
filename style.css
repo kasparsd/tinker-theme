@@ -24,18 +24,18 @@ img { background:#ddd; }
 .wrap-header { float:left; width:100%; clear:both; padding:2em 0; }
 #header { color:inherit; }
 
-#logo { float:left; line-height:1; margin:0 1em 0 0; padding:0 0 1.5em 0; }
+#logo { float:left; line-height:1; margin:0; padding:0 0 1em 0; }
 #logo a { font-size:2em; color:inherit; display:block; padding:1em; margin:-1em 0 -1em -1em; position:relative; z-index:2; }
 #logo em { font-size:0.9em; font-style:normal; padding-top:0.3em; margin-left:0.1em; display:block; }
 #logo img { float:left; margin:-0.2em 0.5em 0 0; border-radius:4px; border:none; }
 
-#nav-main { float:right; margin:1.4em -1em 0 0; padding:0; line-height:1; }
+#nav-main { float:right; margin:1.4em -1em 0 -1em; padding:0; line-height:1; }
 #nav-main ul, #nav-main li { list-style:none; display:block; margin:0; padding:0; }
 #nav-main li { float:left; }
 #nav-main a { color:inherit; display:block; padding:0.8em 1em; }
 #nav-main .current-menu-item > a, #nav-main .current-menu-ancestor > a, #nav-main .current_page_parent > a { color:inherit; font-weight:bold; }
 #nav-main .current-menu-item { }
-#nav-main li ul { display:none; background:#fff; float:left; position:relative; margin:-0.3em -100em -100em 0; border:1px solid #ddd; z-index:5; }
+#nav-main li ul { display:none; background:#fff; float:left; position:relative; margin:-0.1em -100em -100em 0; border-radius:4px; z-index:5; }
 #nav-main li li { width:auto; float:none; clear:both; }
 #nav-main li li a { float:none; }
 #nav-main li li a:hover { }
@@ -68,6 +68,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .entry-content .alignright { float:right; margin:0 0 1.5em 1.5em; }
 .wp-caption-text { font-size:0.9em; color:#666; text-align:center; margin:1em 0 1.5em 0; }
 .page .has-featured-image .entry-title { margin-bottom:1em; }
+.entry-content blockquote { font-style:italic; }
 .post-meta-footer { color:#666; font-size:0.9em; margin-top:1.5em; margin-bottom:1em; padding-top:1em; border-top:1px solid #ddd; }
 .post-meta a { padding:0.5em; font-weight:bold; }
 .post-meta-footer .meta-time { color:#666; margin-right:0.5em; }
