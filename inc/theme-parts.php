@@ -4,7 +4,7 @@
 add_action( 'after_post_title', 'featured_image_header_single', 20 );
 
 function featured_image_header_single() {
-	if ( ! has_post_thumbnail() )
+	if ( ! has_post_thumbnail() || is_search() || is_404() )
 		return;
 
 	printf( 
@@ -111,6 +111,9 @@ function tinklog_yoast_breadcrumb() {
 function tinklog_breadcrumb() {
 	$path = array();
 
+	if ( is_404() || is_search() )
+		return; 
+
 	$page_on_front = get_option( 'page_on_front' );
 	$page_for_posts = get_option( 'page_for_posts' );
 
@@ -136,15 +139,20 @@ add_action( 'content_after', 'tinklog_pagination' );
 function tinklog_pagination() {
 	global $wp_query, $paged;
 
-	if ( ! $wp_query->max_num_pages )
+	if ( ! $wp_query->max_num_pages || is_404() )
 		return;
 
 	$nav = array();
 
-	if ( $older_link = get_previous_posts_link( __( '&larr; Newer', 'tinker' ) ) )
+	if ( is_search() )
+		$labels = array( 'next' => __( 'Next &rarr;', 'tinker' ), 'previous' => __( '&larr; Previous', 'tinker' ) );
+	else
+		$labels = array( 'next' => __( 'Older &rarr;', 'tinker' ), 'previous' => __( '&larr; Newer', 'tinker' ) );
+
+	if ( $older_link = get_previous_posts_link( $labels['previous'] ) )
 		$nav[] = $older_link;
 
-	if ( $newer_link = get_next_posts_link( __( 'Older &rarr;', 'tinker' ) ) )
+	if ( $newer_link = get_next_posts_link( $labels['next'] ) )
 		$nav[] = $newer_link;
 
 	if ( ! empty( $nav ) )
