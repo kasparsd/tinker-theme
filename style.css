@@ -18,6 +18,7 @@ h1 { font-size:2em; margin-top:0; }
 a { color:#386FA5; text-decoration:none; }
 a:hover { text-decoration:underline; }
 img { background:#ddd; }
+form, input, textarea { font:inherit; }
 
 #soul { max-width:650px; margin:0 auto; }
 
@@ -57,7 +58,9 @@ img { background:#ddd; }
 article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; padding-left:25px; padding-right:25px; }
 
 article .entry-title { margin-top:0; margin-bottom:0; }
-.single article .entry-title { margin-top:0.3em; }
+.single article .entry-title,
+.search article .entry-title,
+.error404 article .entry-title { margin-top:0.3em; }
 article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em; margin-bottom:-0.3em; }
 .page .entry-title { padding-bottom:0; padding-top:0.3em; }
 .entry-content { margin-top:1.5em; margin-bottom:1.5em; }
@@ -75,8 +78,10 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .meta-comment-count { margin-left:0.5em; }
 .post-featured-header img { min-width:100%; max-width:100%; height:auto; background:#ddd; }
 .post-featured-header { padding:0; position:relative; min-width:100%; height:auto; margin-top:1.5em; }
-.read-more { font-weight:bold; }
+.more-link { font-weight:bold; }
 .entry-content iframe, .entry-content object { min-width:100%; } 
+
+.post pre, .page pre { font-size:0.9em; background:#eee; padding:0.5em 1em; margin:2em 0; overflow:auto; overflow-y:none; }
 
 .gallery img { margin:0 auto; }
 
@@ -86,7 +91,12 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .attachment .attachment-nav { float:right; }
 .attachment .attachment-nav a, .attachment .attachment-parent { display:inline-block; font-size:0.9em; padding:0.5em; }
 
-.post pre, .page pre { font-size:0.9em; background:#eee; padding:0.5em 1em; overflow:auto; overflow-y:none; }
+#searchform { margin:0 0 2em 0; width:100%; }
+#searchform #s { border:1px solid #ddd; border-radius:4px; padding:0.1em 0.5em; max-width:80%; }
+.search-results { display:block; }
+.search-results li h1 { font-size:inherit; }
+
+.screen-reader-text { position:absolute; overflow:hidden; width:0; height:0; float:left; left:-9876em; }
 
 .pagination { vertical-align:middle; display:block; float:left; width:100%; margin-bottom:3em; clear:both; text-align:center; }
 .pagination .links { font-weight:bold; font-size:1.1em; }
@@ -123,18 +133,23 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .widget-title { margin-top:0; font-size:1em; }
 
 .wrap-footer { float:left; width:100%; clear:both; padding:0 0 3em 0; }
-#footer { font-size:0.9em; margin-bottom:2em; float:left; width:100%; clear:both; }
+#footer { font-size:0.9em; margin-bottom:2em; float:left; width:104%; margin-left:-1.5%; clear:both; }
 #footer .widget li { display:block; list-style:none; }
 #footer .widget li a { display:block; padding:0; }
-#footer .widget { float:left; width:30%; margin-right:3%; }
+#footer .widget { float:left; width:30%; margin:0 1.5%; }
 .footer-menu-wrap { font-size:0.9em; display:block; float:left; width:100%; clear:both; margin:1em 0; }
 .footer-menu-wrap a { float:left; color:inherit; padding:0.5em 1em; }
 .footer-menu-wrap .home a { margin-left:-1em; }
+
+#footer #searchform { width:100%; margin:0; }
+#footer #s { padding:0.2em; max-width:90%; }
+#footer #searchsubmit { display:none; }
 
 #nav-footer { float:right; margin-right:-1em; }
 #nav-footer li, #nav-footer a { display:block; float:left; }
 #nav-footer .current-menu-item a,
 #nav-footer .current_page_parent a { font-weight:bold; }
+
 
 /*
 	Plugin: Jetpack sharing
@@ -142,6 +157,12 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 #content-main .sharedaddy { font:inherit; margin-top:2em; color:#666; margin-bottom:-1.25em; }
 .page #content-main .sharedaddy { margin-bottom:0.5em; }
 #content-main .sharedaddy h3 { font:inherit; font-size:0.9em; margin:0; color:inherit; }
+
+
+@media only screen and (max-width: 600px) {
+	#footer { margin-left:0; width:100%; }
+	#footer .widget { width:100%; margin:0 0 2em 0; }
+}
 
 
 
