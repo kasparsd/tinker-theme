@@ -7,7 +7,8 @@ function add_main_menu() {
 	wp_nav_menu( array( 
 			'theme_location' => 'main_menu',
 			'container_id' => 'nav-main',
-			'fallback_cb' => false
+			'fallback_cb' => false,
+			'depth' => 2
 		) 
 	);
 }
@@ -32,3 +33,4 @@ function tinker_credits_footer() {
 		) )
 	);
 }
+
