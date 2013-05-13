@@ -3,18 +3,23 @@
 $tinker_filters = array(
 		'maybe_add_blog_avatar' => array( 
 			'hook' => 'logo_image', 
-			'label' => __( 'Hide Gravatar image in the header', 'tinker' ),
-			'default' => false
+			'label' => __( 'Show Gravatar image in the header', 'tinker' ),
+			'default' => true
 		),
 		'tinklog_breadcrumb' => array( 
 			'hook' => 'content_before', 
-			'label' => __( 'Hide breadcrumbs', 'tinker' ),
-			'default' => false
+			'label' => __( 'Enable breadcrumbs', 'tinker' ),
+			'default' => true
 		),
 		'tinker_credits_footer' => array( 
 			'hook' => 'after_footer', 
-			'label' => __( 'Hide footer menu', 'tinker' ),
-			'default' => false
+			'label' => __( 'Enable footer menu', 'tinker' ),
+			'default' => true
+		),
+		'tinker_favicon' => array( 
+			'hook' => 'wp_head', 
+			'label' => __( 'Use Gravatar as favicon', 'tinker' ),
+			'default' => true
 		),
 		//'' => array( 'hook' => '', 'label' => __( '', tinker ) ),
 	);
@@ -158,7 +163,7 @@ function tinker_apply_customization() {
 	global $tinker_filters;
 
 	foreach ( $tinker_filters as $filter => $options )
-		if ( get_theme_mod( $filter, $options['default'] ) )
+		if ( ! get_theme_mod( $filter, $options['default'] ) )
 			remove_action( $options['hook'], $filter );
 }
 
