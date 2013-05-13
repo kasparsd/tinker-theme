@@ -27,12 +27,14 @@ function add_head_feed_link() {
 }
 
 
-add_action( 'wp_head', 'add_head_favicon', 8 );
+add_action( 'wp_head', 'tinker_favicon' );
 
-function add_head_favicon() {
+function tinker_favicon() {
+	$email_hash = md5( strtolower( trim( get_option( 'admin_email' ) ) ) );
+
 	printf(
 		'<link rel="icon" type="image/png" href="%s" />',
-		get_avatar( get_option( 'admin_email' ), 64 )
+		sprintf( 'http://%d.gravatar.com/avatar/%s?s=64', ( hexdec( $email_hash[0] ) % 2 ), $email_hash )
 	);
 }
 
