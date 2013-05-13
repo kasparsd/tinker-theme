@@ -24,36 +24,43 @@ $tinker_colors = array(
 			'label' => __( 'Links', 'tinker' ),
 			'default' => '#1e73be',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'dom' => 'a',
-			'css' => 'color'
+			'css' => array( 
+				'a' => 'color'
+			)
 		),
 		'header-color' => array( 
 			'label' => __( 'Header text', 'tinker' ),
 			'default' => '#222222',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'dom' => '#header, .breadcrumbs, .pagination, .wrap-footer',
-			'css' => 'color'
+			'css' => array( 
+				'#header, .breadcrumbs, .pagination, .wrap-footer' => 'color',
+				'#header li .sub-menu' => 'background-color'
+			)
 		),
 		'background-color' => array(
 			'label' => __( 'Background', 'tinker' ),
 			'default' => '#eeeeee',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'dom' => 'body',
-			'css' => 'background-color'
+			'css' => array( 
+				'body' => 'background-color',
+				'#nav-main .sub-menu a' => 'color'
+			)
 		),
 		'text-color' => array( 
 			'label' => __( 'Text', 'tinker' ),
 			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'dom' => 'body',
-			'css' => 'color'
+			'css' => array( 
+				'body' => 'color' 
+			)
 		),
 		'headline-color' => array( 
 			'label' => __( 'Headlines', 'tinker' ),
 			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'dom' => 'article .entry-title',
-			'css' => 'color'
+			'css' => array( 
+				'article .entry-title' => 'color' 
+			)
 		)
 	);
 
@@ -131,7 +138,8 @@ function tinker_custom_styles() {
 		$mod_value = get_theme_mod( $color, $settings['default'] );
 
 		if ( strcasecmp( $mod_value, $settings['default'] ) )
-			$styles[] = sprintf( '%s { %s:%s; }', $settings['dom'], $settings['css'], $mod_value );
+			foreach ( $settings['css'] as $selector => $property )
+			$styles[] = sprintf( '%s { %s:%s; }', $selector, $property, $mod_value );
 	}
 
 	if ( ! empty( $styles ) )
