@@ -92,9 +92,7 @@ function add_post_meta_header() {
 add_action( 'logo_image', 'maybe_add_blog_avatar' );
 
 function maybe_add_blog_avatar() {
-	$admin_email = get_option( 'admin_email' );
-
-	echo get_avatar( $admin_email, 64 );
+	echo get_avatar( get_option( 'admin_email' ), 64 );
 }
 
 
