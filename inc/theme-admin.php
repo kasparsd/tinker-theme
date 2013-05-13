@@ -29,7 +29,7 @@ $tinker_colors = array(
 		),
 		'header-color' => array( 
 			'label' => __( 'Header text', 'tinker' ),
-			'default' => '#333333',
+			'default' => '#222222',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'dom' => '#header, .breadcrumbs, .pagination, .wrap-footer',
 			'css' => 'color'
