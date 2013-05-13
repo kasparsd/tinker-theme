@@ -31,8 +31,8 @@ add_action( 'wp_head', 'add_head_favicon', 8 );
 
 function add_head_favicon() {
 	printf(
-		'<link rel="icon" type="image/png" href="%s/images/favicon.png" />',
-		get_stylesheet_directory_uri()
+		'<link rel="icon" type="image/png" href="%s" />',
+		get_avatar( get_option( 'admin_email' ), 64 )
 	);
 }
 
