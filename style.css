@@ -1,15 +1,14 @@
 /*   
-Theme Name: Tinker Blog
-Theme URI: http://konstruktors.com/
-Description: A simple theme for blogs
-Version: 0.1
+Theme Name: Tinker Blog Theme
+Theme URI: http://preseto.com
+Description: For Creators, Bloggers and Writers
+Version: 1.1
 Author: Kaspars Dambis 
-Author URI: http://konstruktors.com/
+Author URI: http://preseto.com
 */
 
-body { font:16px/1.5 sans-serif; color:#333; margin:0; padding:0 1em; background:#eee; }
-h1, h2, h3, h4, h5, h6 { color:#222; margin-top:1.25em; font-size:1.5em; margin-bottom:0.75em; line-height:1.3; }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {  }
+body { font:16px/1.5 sans-serif; color:#333; margin:0; padding:0 1em; background:#ddd; }
+h1, h2, h3, h4, h5, h6 { color:#222; margin-top:1.25em; font-size:1.25em; margin-bottom:0.75em; line-height:1.3; }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { text-decoration:underline; }
 p, pre { margin:0 0 1.25em 0; }
 pre, code { font-size:inherit; }
@@ -17,28 +16,28 @@ ul, ol { margin:0 0 1.25em 0; }
 h1 { font-size:2em; margin-top:0; }
 a { color:#386FA5; text-decoration:none; }
 a:hover { text-decoration:underline; }
-img { background:#ddd; }
+a img { border:none; }
 form, input, textarea { font:inherit; }
 
 #soul { max-width:650px; margin:0 auto; }
 
-.wrap-header { float:left; width:100%; clear:both; padding:2em 0; }
+.wrap-header { float:left; width:100%; clear:both; padding:3em 0; }
 #header { color:inherit; }
 
-#logo { float:left; line-height:1; margin:0; padding:0 0 1em 0; }
-#logo a { font-size:2em; color:inherit; display:block; padding:1em; margin:-1em 0 -1em -1em; position:relative; z-index:2; }
-#logo em { font-size:0.9em; font-style:normal; padding-top:0.3em; margin-left:0.1em; display:block; }
-#logo img { float:left; margin:-0.2em 0.5em 0 0; border-radius:4px; border:none; }
+#logo { float:left; line-height:1; margin:0; padding:0; }
+#logo a { font-size:1em; color:inherit; display:block; padding:1em; margin:-1em 0 0 -1em; position:relative; z-index:2; }
+#logo em { font-size:0.9em; font-style:normal; padding-top:0.3em; margin-left:0.1em; display:block; display:none; }
+#logo img { float:left; margin:-1.5em 1em 0 0; border:none; }
 
-#nav-main { float:right; margin:1.4em -1em 0 -1em; padding:0; line-height:1; }
+#nav-main { float:right; margin:-1em -1em 0 -1em; padding:0; line-height:1; }
 #nav-main ul, #nav-main li { list-style:none; display:block; margin:0; padding:0; }
 #nav-main li { float:left; }
-#nav-main a { color:inherit; display:block; padding:0.8em 1em; }
+#nav-main a { color:inherit; display:block; padding:1em; }
 #nav-main .current-menu-item > a, #nav-main .current-menu-ancestor > a, #nav-main .current_page_parent > a { color:inherit; font-weight:bold; }
 #nav-main .current-menu-item { }
-#nav-main li ul { display:none; background:#fff; float:left; position:relative; margin:-0.1em -100em -100em 0; border-radius:4px; z-index:5; }
-#nav-main li li { width:auto; float:none; clear:both; }
-#nav-main li li a { float:none; }
+#nav-main li .sub-menu { display:none; background:#222; float:left; position:relative; padding:0.4em 0; margin:-0.1em -100em -100em 0; z-index:5; }
+#nav-main .sub-menu li { width:auto; float:none; clear:both; }
+#nav-main .sub-menu a { float:none; color:#eee; }
 #nav-main li li a:hover { }
 #nav-main li:hover ul { display:block; }
 
@@ -52,7 +51,7 @@ form, input, textarea { font:inherit; }
 .section-header { font-size:1em; display:block; margin:-0.75em 0 2em 0; }
 
 #content-main article, 
-#content-main article { padding:0.5em 25px; background-color:#fff; margin-bottom:2.5em; position:relative; border-radius:4px; }
+#content-main article { padding:0.5em 25px; background-color:#fff; margin-bottom:2.5em; position:relative; }
 
 .post-featured-header, 
 article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; padding-left:25px; padding-right:25px; }
@@ -92,7 +91,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .attachment .attachment-nav a, .attachment .attachment-parent { display:inline-block; font-size:0.9em; padding:0.5em; }
 
 #searchform { margin:0 0 2em 0; width:100%; }
-#searchform #s { border:1px solid #ddd; border-radius:4px; padding:0.1em 0.5em; max-width:80%; }
+#searchform #s { border:1px solid #ddd; padding:0.1em 0.5em; max-width:80%; }
 .search-results { display:block; }
 .search-results li h1 { font-size:inherit; }
 
@@ -133,11 +132,11 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .widget-title { margin-top:0; font-size:1em; }
 
 .wrap-footer { float:left; width:100%; clear:both; padding:0 0 3em 0; }
-#footer { font-size:0.9em; margin-bottom:2em; float:left; width:104%; margin-left:-1.5%; clear:both; }
+#footer { margin-bottom:2em; float:left; width:104%; margin-left:-1.5%; clear:both; }
 #footer .widget li { display:block; list-style:none; }
 #footer .widget li a { display:block; padding:0; }
-#footer .widget { float:left; width:30%; margin:0 1.5%; }
-.footer-menu-wrap { font-size:0.9em; display:block; float:left; width:100%; clear:both; margin:1em 0; }
+#footer .widget { font-size:0.9em; float:left; width:30%; margin:0 1.5%; }
+.footer-menu-wrap { display:block; float:left; width:100%; clear:both; margin:1em 0; }
 .footer-menu-wrap a { float:left; color:inherit; padding:0.5em 1em; }
 .footer-menu-wrap .home a { margin-left:-1em; }
 
