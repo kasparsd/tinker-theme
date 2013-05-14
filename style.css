@@ -133,7 +133,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .widget-title { margin-top:0; font-size:1em; }
 
 .wrap-footer { float:left; width:100%; clear:both; padding:0 0 3em 0; }
-#footer { margin-bottom:2em; float:left; width:104%; margin-left:-1.5%; clear:both; }
+#footer { float:left; width:104%; margin-left:-1.5%; clear:both; }
 #footer .widget li { display:block; list-style:none; }
 #footer .widget li a { display:block; padding:0; }
 #footer .widget { font-size:0.9em; float:left; width:30%; margin:0 1.5%; margin-bottom:2em; }
