@@ -143,7 +143,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 
 #footer #searchform { width:100%; margin:0; }
 #footer #s { padding:0.2em; max-width:90%; }
-#footer #searchsubmit { display:block; }
+#footer #searchsubmit { display:none; }
 
 #nav-footer { float:right; margin-right:-1em; }
 #nav-footer li, #nav-footer a { display:block; float:left; }
