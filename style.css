@@ -92,7 +92,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .attachment .attachment-nav a, .attachment .attachment-parent { display:inline-block; font-size:0.9em; padding:0.5em; }
 
 #searchform { margin:0 0 2em 0; width:100%; }
-#searchform #s { border:1px solid #ddd; padding:0.1em 0.5em; max-width:80%; }
+#searchform #s { border:1px solid #ccc; padding:0.1em 0.5em; max-width:80%; }
 .search-results { display:block; }
 .search-results li h1 { font-size:inherit; }
 
@@ -136,14 +136,14 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 #footer { margin-bottom:2em; float:left; width:104%; margin-left:-1.5%; clear:both; }
 #footer .widget li { display:block; list-style:none; }
 #footer .widget li a { display:block; padding:0; }
-#footer .widget { font-size:0.9em; float:left; width:30%; margin:0 1.5%; }
+#footer .widget { font-size:0.9em; float:left; width:30%; margin:0 1.5%; margin-bottom:2em; }
 .footer-menu-wrap { display:block; float:left; width:100%; clear:both; margin:1em 0; }
 .footer-menu-wrap a { float:left; color:inherit; padding:0.5em 1em; }
 .footer-menu-wrap .home a { margin-left:-1em; }
 
 #footer #searchform { width:100%; margin:0; }
 #footer #s { padding:0.2em; max-width:90%; }
-#footer #searchsubmit { display:none; }
+#footer #searchsubmit { display:block; }
 
 #nav-footer { float:right; margin-right:-1em; }
 #nav-footer li, #nav-footer a { display:block; float:left; }
