@@ -20,7 +20,7 @@ $tinker_filters = array(
 			'hook' => 'wp_head', 
 			'label' => __( 'Use Gravatar as favicon', 'tinker' ),
 			'default' => true
-		)
+		)	
 	);
 
 $tinker_colors = array(
@@ -180,4 +180,25 @@ function tinker_move_excerpt_editor( $hook ) {
 }
 
 
+add_action( 'login_enqueue_scripts', 'tinker_custom_login_logo' );
+
+function tinker_custom_login_logo() {
+	$email_hash = md5( strtolower( trim( get_option( 'admin_email' ) ) ) );
+
+	if ( is_ssl() )
+		$host = 'https://secure.gravatar.com';
+	else
+		$host = 'http://gravatar.com';
+
+	printf( 
+		'<style type="text/css">
+			.login h1 a { 
+				background:url("%s/avatar/%s?s=64") no-repeat center center; 
+				height:80px; 
+			}
+		</style>',
+		$host, 
+		$email_hash 
+	);
+}
 
