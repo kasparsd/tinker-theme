@@ -32,9 +32,14 @@ add_action( 'wp_head', 'tinker_favicon' );
 function tinker_favicon() {
 	$email_hash = md5( strtolower( trim( get_option( 'admin_email' ) ) ) );
 
+	if ( is_ssl() )
+		$host = 'https://secure.gravatar.com';
+	else
+		$host = 'http://gravatar.com';
+
 	printf(
 		'<link rel="icon" type="image/png" href="%s" />',
-		sprintf( 'http://%d.gravatar.com/avatar/%s?s=64', ( hexdec( $email_hash[0] ) % 2 ), $email_hash )
+		sprintf( '%s/avatar/%s?s=64', $host, $email_hash )
 	);
 }
 
