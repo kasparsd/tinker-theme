@@ -20,8 +20,7 @@ $tinker_filters = array(
 			'hook' => 'wp_head', 
 			'label' => __( 'Use Gravatar as favicon', 'tinker' ),
 			'default' => true
-		),
-		//'' => array( 'hook' => '', 'label' => __( '', tinker ) ),
+		)
 	);
 
 $tinker_colors = array(
