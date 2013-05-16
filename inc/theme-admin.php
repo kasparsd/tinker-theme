@@ -43,7 +43,7 @@ $tinker_colors = array(
 		),
 		'background-color' => array(
 			'label' => __( 'Background', 'tinker' ),
-			'default' => '#eeeeee',
+			'default' => '#dddddd',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'css' => array( 
 				'body' => 'background-color',
@@ -68,24 +68,56 @@ $tinker_colors = array(
 		)
 	);
 
+$tinker_google_fonts = array(
+		'Noto+Sans:400,700,400italic,700italic',
+		'Cantata+One',
+		'Playfair+Display:400,700,400italic,700italic',
+		'PT+Sans:400,700,400italic,700italic',
+		'PT+Sans+Caption:400,700',
+		'PT+Mono',
+		'Noto+Serif:400,700,400italic,700italic',
+		'Roboto+Slab:400,700',
+		'Abril+Fatface',
+		'Open+Sans:400italic,700italic,400,700',
+		'Roboto+Condensed:400italic,700italic,400,700',
+		'Oxygen:400,700',
+		'Titillium+Web:400,400italic,700,700italic',
+		'Bree+Serif'
+ 	);
+
+$tinker_font_choices = array( 
+		'' => __( 'Default', 'tinker' ) 
+	);
+
+foreach ( $tinker_google_fonts as $font_uri )
+	$tinker_font_choices[ $font_uri ] = str_replace( '+', ' ', current( explode( ':', $font_uri ) ) );
+
+$tinker_fonts = array(
+		'heading-font' => array( 
+			'label' => __( 'Headings', 'tinker' ),
+			'choices' => $tinker_font_choices,
+			'css' => array( 
+				'.wf-active #header, .wf-active .footer-menu-wrap, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6' => 'font-family'
+			)
+		),
+		'body-font' => array( 
+			'label' => __( 'Body text', 'tinker' ),
+			'choices' => $tinker_font_choices,
+			'css' => array( 
+				'.wf-active body' => 'font-family'
+			)
+		)
+	);
+
 
 add_action( 'customize_register', 'tinker_customizer' );
 
 function tinker_customizer( $wp_customize ) {
-	global $tinker_filters, $tinker_colors;
+	global $tinker_filters, $tinker_colors, $tinker_fonts;
 
 	/**
 	 * Theme color options
 	 */
-	
-	$wp_customize->add_section(
-		'tinker-colors',
-		array(
-			'title' => __( 'Colors', 'tinker' ),
-			'description' => __( 'Choose background and text color.' ),
-			'priority' => 40
-		)
-	);
 
 	foreach ( $tinker_colors as $color_name => $color_options ) {
 		$wp_customize->add_setting( $color_name, $color_options );
@@ -96,12 +128,41 @@ function tinker_customizer( $wp_customize ) {
 				$color_name,
 				array(
 					'label' => $color_options['label'],
-					'section' => 'tinker-colors',
+					'section' => 'colors',
 					'settings' => $color_name,
 				)
 			)
 		);
 	}
+
+
+	/**
+	 * Tinker fonts
+	 */
+
+	$wp_customize->add_section(
+		'tinker-fonts',
+		array(
+			'title' => __( 'Fonts', 'tinker' ),
+			'description' => __( 'Choose fonts for headings and body text.', 'tinker' ),
+			'priority' => 45
+		)
+	);
+
+	foreach ( $tinker_fonts as $font_setting => $font_options ) {
+		$wp_customize->add_setting( $font_setting, array( 'default' => '' ) );
+
+		$wp_customize->add_control(
+			$font_setting,
+			array(
+				'type' => 'select',
+				'section' => 'tinker-fonts',
+				'label' => $font_options['label'],
+				'choices' => $font_options['choices']
+ 			)
+		);
+	}
+
 
 	/**
 	 * Turn regular WordPress actions into theme options
@@ -112,7 +173,7 @@ function tinker_customizer( $wp_customize ) {
 		array(
 			'title' => __( 'Header & Footer', 'tinker' ),
 			'description' => __( 'Enable or disable certain theme elements.', 'tinker' ),
-			'priority' => 40
+			'priority' => 50
 		)
 	);
 
@@ -131,28 +192,71 @@ function tinker_customizer( $wp_customize ) {
 }
 
 
-add_action( 'wp_footer', 'tinker_custom_styles', 50 );
+add_action( 'wp_head', 'tinker_custom_styles' );
 
 function tinker_custom_styles() {
-	global $tinker_colors;
+	global $tinker_colors, $tinker_fonts;
 
 	$styles = array();
 
+	// Custom colors
 	foreach ( $tinker_colors as $color => $settings ) {
 		$mod_value = get_theme_mod( $color, $settings['default'] );
 
 		if ( strcasecmp( $mod_value, $settings['default'] ) )
 			foreach ( $settings['css'] as $selector => $property )
-			$styles[] = sprintf( '%s { %s:%s; }', $selector, $property, $mod_value );
+				$styles[] = sprintf( '%s { %s:%s; }', $selector, $property, $mod_value );
+	}
+
+	// Custom fonts
+	foreach ( $tinker_fonts as $font => $font_settings ) {
+		$mod_value = get_theme_mod( $font, '' );
+		
+		if ( ! empty( $mod_value ) )
+			foreach ( $font_settings['css'] as $selector => $property )
+				$styles[] = sprintf( '%s { %s: "%s", sans-serif; }', $selector, $property, str_replace( '+', ' ', current( explode( ':', $mod_value ) ) ) );
 	}
 
 	if ( ! empty( $styles ) )
 		printf( 
-			'<style type="text/css">
-				%s
-			</style>',
-			implode( "\n", $styles )
+			'<style type="text/css">%s</style>',
+			implode( ' ', $styles )
 		);
+}
+
+
+add_action( 'wp_footer', 'tinker_custom_fonts', 30 );
+
+function tinker_custom_fonts() {
+	global $tinker_fonts;
+
+	$queue = array();
+
+	// CSS styles for google fonts
+	foreach ( $tinker_fonts as $font => $font_settings ) {
+		$mod_value = get_theme_mod( $font, '' );
+		
+		if ( ! empty( $mod_value ) && ! array_key_exists( $font, $queue ) )
+			$queue[ $font ] = sprintf( '"%s"', $mod_value );
+	}
+
+	if ( ! empty( $queue ) )
+		printf( 
+			'<script type="text/javascript">
+				WebFontConfig = { google: { families: [ %s ] } };
+				(function() {
+					var wf = document.createElement("script");
+					wf.src = ("https:" == document.location.protocol ? "https" : "http") +
+					"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";
+					wf.type = "text/javascript";
+					wf.async = "true";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(wf, s);
+				})();
+			</script>', 
+			implode( ', ', $queue )
+		);	
+	
 }
 
 
