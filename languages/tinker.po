@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tinker Theme for WordPress\n"
-"POT-Creation-Date: 2013-05-13 00:13+0100\n"
-"PO-Revision-Date: 2013-05-13 00:13+0100\n"
+"POT-Creation-Date: 2013-05-18 01:00+0100\n"
+"PO-Revision-Date: 2013-05-18 01:00+0100\n"
 "Last-Translator: Kaspars <kaspars@konstruktors.com>\n"
 "Language-Team:  <kaspars@konstruktors.com>\n"
 "Language: English\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ../content.php:3 ../inc/theme-parts.php:177
+#: ../content.php:3 ../inc/theme-parts.php:174
 msgid "Read more &rarr;"
 msgstr ""
 
@@ -35,51 +35,71 @@ msgstr ""
 msgid "Sorry, but nothing matched your search criteria."
 msgstr ""
 
+#: ../searchform.php:3
+msgid "Search"
+msgstr ""
+
 #: ../inc/theme-admin.php:6
-msgid "Hide Gravatar image in the header"
+msgid "Show Gravatar image in the header"
 msgstr ""
 
 #: ../inc/theme-admin.php:11
-msgid "Hide breadcrumbs"
+msgid "Enable breadcrumbs"
 msgstr ""
 
 #: ../inc/theme-admin.php:16
-msgid "Hide footer menu"
+msgid "Enable footer menu"
 msgstr ""
 
-#: ../inc/theme-admin.php:24
+#: ../inc/theme-admin.php:21
+msgid "Use Gravatar as favicon"
+msgstr ""
+
+#: ../inc/theme-admin.php:28
 msgid "Links"
 msgstr ""
 
-#: ../inc/theme-admin.php:31
+#: ../inc/theme-admin.php:36
 msgid "Header text"
 msgstr ""
 
-#: ../inc/theme-admin.php:38
+#: ../inc/theme-admin.php:45
 msgid "Background"
 msgstr ""
 
-#: ../inc/theme-admin.php:45
+#: ../inc/theme-admin.php:54
 msgid "Text"
 msgstr ""
 
-#: ../inc/theme-admin.php:52
+#: ../inc/theme-admin.php:62
 msgid "Headlines"
 msgstr ""
 
-#: ../inc/theme-admin.php:73
-msgid "Colors"
+#: ../inc/theme-admin.php:97
+msgid "Default"
 msgstr ""
 
-#: ../inc/theme-admin.php:74
-msgid "Choose background and text color."
+#: ../inc/theme-admin.php:105
+msgid "Headings"
 msgstr ""
 
-#: ../inc/theme-admin.php:102
+#: ../inc/theme-admin.php:112
+msgid "Body text"
+msgstr ""
+
+#: ../inc/theme-admin.php:154
+msgid "Fonts"
+msgstr ""
+
+#: ../inc/theme-admin.php:155
+msgid "Choose fonts for headings and body text."
+msgstr ""
+
+#: ../inc/theme-admin.php:182
 msgid "Header & Footer"
 msgstr ""
 
-#: ../inc/theme-admin.php:103
+#: ../inc/theme-admin.php:183
 msgid "Enable or disable certain theme elements."
 msgstr ""
 
@@ -88,11 +108,11 @@ msgstr ""
 msgid "%s RSS feed"
 msgstr ""
 
-#: ../inc/theme-parts.php:46 ../inc/theme-parts.php:148
+#: ../inc/theme-parts.php:46 ../inc/theme-parts.php:145
 msgid "&larr; Previous"
 msgstr ""
 
-#: ../inc/theme-parts.php:47 ../inc/theme-parts.php:148
+#: ../inc/theme-parts.php:47 ../inc/theme-parts.php:145
 msgid "Next &rarr;"
 msgstr ""
 
@@ -100,19 +120,19 @@ msgstr ""
 msgid "Add Comment"
 msgstr ""
 
-#: ../inc/theme-parts.php:121
+#: ../inc/theme-parts.php:118
 msgid "Home"
 msgstr ""
 
-#: ../inc/theme-parts.php:150
+#: ../inc/theme-parts.php:147
 msgid "Older &rarr;"
 msgstr ""
 
-#: ../inc/theme-parts.php:150
+#: ../inc/theme-parts.php:147
 msgid "&larr; Newer"
 msgstr ""
 
-#: ../inc/theme-parts.php:165
+#: ../inc/theme-parts.php:162
 #, php-format
 msgid "Page %d of %d"
 msgstr ""
