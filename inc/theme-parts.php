@@ -96,18 +96,17 @@ function maybe_add_blog_avatar() {
 }
 
 
-// Use WordPress SEO breadcrumbs if plugin installed
-if ( function_exists( 'yoast_breadcrumb' ) )
-	add_action( 'content_before', 'tinklog_yoast_breadcrumb' );
-else
-	add_action( 'content_before', 'tinklog_breadcrumb' );
 
-function tinklog_yoast_breadcrumb() {
-	yoast_breadcrumb( '<p class="breadcrumbs yoast-breadcrumbs">', '</p>' );
-}
+add_action( 'content_before', 'tinklog_breadcrumb' );
 
 function tinklog_breadcrumb() {
 	$path = array();
+
+	// Use WordPress SEO breadcrumbs if plugin installed
+	if ( function_exists( 'yoast_breadcrumb' ) ) {
+		yoast_breadcrumb( '<p class="breadcrumbs yoast-breadcrumbs">', '</p>' );
+		return;
+	}
 
 	if ( is_404() || is_search() )
 		return; 
