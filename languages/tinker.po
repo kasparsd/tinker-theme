@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tinker Theme for WordPress\n"
-"POT-Creation-Date: 2013-05-18 01:00+0100\n"
-"PO-Revision-Date: 2013-05-18 01:00+0100\n"
+"POT-Creation-Date: 2013-05-18 01:16+0100\n"
+"PO-Revision-Date: 2013-05-18 01:16+0100\n"
 "Last-Translator: Kaspars <kaspars@konstruktors.com>\n"
 "Language-Team:  <kaspars@konstruktors.com>\n"
 "Language: English\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-KeywordsList: __;_e;_n;esc_attr_e;esc_attr__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Sorry, but nothing matched your search criteria."
 msgstr ""
 
-#: ../searchform.php:3
+#: ../searchform.php:3 ../searchform.php:4 ../searchform.php:5
 msgid "Search"
 msgstr ""
 
