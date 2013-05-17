@@ -68,9 +68,9 @@ $tinker_colors = array(
 		)
 	);
 
+
 $tinker_google_fonts = array(
 		'Noto+Sans:400,700,400italic,700italic',
-		'Cantata+One',
 		'Playfair+Display:400,700,400italic,700italic',
 		'PT+Sans:400,700,400italic,700italic',
 		'PT+Sans+Caption:400,700',
@@ -79,14 +79,23 @@ $tinker_google_fonts = array(
 		'Roboto+Slab:400,700',
 		'Abril+Fatface',
 		'Open+Sans:400italic,700italic,400,700',
+		'Roboto:400,400italic,700,700italic',
+		'Roboto+Slab:400,300,700',
 		'Roboto+Condensed:400italic,700italic,400,700',
+		'Source+Sans+Pro:400,700,400italic,700italic',
 		'Oxygen:400,700',
 		'Titillium+Web:400,400italic,700,700italic',
-		'Bree+Serif'
- 	);
+		'Bree+Serif',
+		'Domine:400,700',
+		'Cantata+One',
+		'Yeseva+One',
+		'Arimo:400,700,400italic,700italic',
+		'Libre+Baskerville:400,700,400italic',
+		'Abril+Fatface',
+	);
 
 $tinker_font_choices = array( 
-		'' => __( 'Default', 'tinker' ) 
+		'' => __( 'Default', 'tinker' )
 	);
 
 foreach ( $tinker_google_fonts as $font_uri )
