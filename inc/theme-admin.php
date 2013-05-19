@@ -1,5 +1,22 @@
 <?php
 
+
+/**
+ * Add a submenu item under Appearance as WordPress 3.5 doesn't add this by default.
+ */
+add_action( 'admin_menu', 'maybe_add_theme_customizer_menu' );
+
+function maybe_add_theme_customizer_menu() {
+	global $wp_version;
+	
+	if ( version_compare( '3.6', $wp_version ) )
+		add_theme_page( __( 'Customize' ), __( 'Customize' ), 'edit_theme_options', 'customize.php' );
+}
+
+/**
+ * Filters we allow the user to disable/enable
+ * @var array
+ */
 $tinker_filters = array(
 		'maybe_add_blog_avatar' => array( 
 			'hook' => 'logo_image', 
@@ -23,6 +40,11 @@ $tinker_filters = array(
 		)	
 	);
 
+
+/**
+ * Tinker theme colors
+ * @var array
+ */
 $tinker_colors = array(
 		'link-color' => array( 
 			'label' => __( 'Links', 'tinker' ),
@@ -69,6 +91,10 @@ $tinker_colors = array(
 	);
 
 
+/**
+ * Tinker fonts frot Google Webfonts
+ * @var array
+ */
 $tinker_google_fonts = array(
 		'Noto+Sans:400,700,400italic,700italic',
 		'Playfair+Display:400,700,400italic,700italic',
