@@ -1,2 +1,1 @@
-
-# Tinklog Blog Theme for WordPress
+Tinker theme for WordPress
