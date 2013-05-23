@@ -1,1 +1,1 @@
-Tinker theme for WordPress
+Visit [tinker.com](http://tinker.com)
