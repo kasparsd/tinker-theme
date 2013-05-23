@@ -7,13 +7,21 @@ function featured_image_header_single() {
 	if ( ! has_post_thumbnail() || is_search() || is_404() )
 		return;
 
-	printf( 
-		'<div class="post-featured-header">
-			<a href="%s">%s</a>
-		</div>',
-		get_permalink(),
-		get_the_post_thumbnail( null, 'featured-header' ) 
-	);
+	if ( is_page() )
+		printf( 
+			'<div class="post-featured-header">
+				%s
+			</div>',
+			get_the_post_thumbnail( null, 'featured-header' ) 
+		);
+	else
+		printf( 
+			'<div class="post-featured-header">
+				<a href="%s">%s</a>
+			</div>',
+			get_permalink(),
+			get_the_post_thumbnail( null, 'featured-header' ) 
+		);
 }
 
 
