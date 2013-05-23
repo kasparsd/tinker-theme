@@ -1,2 +1,1 @@
-
-# Tinker Blog Theme for WordPress
+Visit http://preseto.com/tinker for theme documentation.
