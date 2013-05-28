@@ -121,9 +121,14 @@ function tinklog_breadcrumb() {
 
 	$page_on_front = get_option( 'page_on_front' );
 	$page_for_posts = get_option( 'page_for_posts' );
+	$page_ancestors = get_ancestors( get_queried_object_id(), 'page' );
 
 	if ( $page_on_front )
 		$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $page_on_front ), __('Home') );
+
+	if ( is_page() && ! empty( $page_ancestors ) )
+		foreach ( array_reverse( $page_ancestors ) as $ancestor )
+			$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $ancestor ), esc_html( get_the_title( $ancestor ) ) );
 
 	if ( ( is_single() || is_archive() || get_query_var( 'paged' ) ) && $page_for_posts )
 		$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $page_for_posts ), get_the_title( $page_for_posts ) );
