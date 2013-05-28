@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tinker Theme for WordPress\n"
-"POT-Creation-Date: 2013-05-18 01:16+0100\n"
-"PO-Revision-Date: 2013-05-18 01:17+0100\n"
+"POT-Creation-Date: 2013-05-28 19:59+0100\n"
+"PO-Revision-Date: 2013-05-28 19:59+0100\n"
 "Last-Translator: Kaspars <kaspars@konstruktors.com>\n"
 "Language-Team:  <kaspars@konstruktors.com>\n"
 "Language: Latvian\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../comments.php:15 ../inc/theme-parts.php:74
+#: ../comments.php:15 ../inc/theme-parts.php:82
 msgid "One Comment"
 msgstr "Viens komentārs"
 
@@ -23,7 +23,7 @@ msgstr "Viens komentārs"
 msgid "Comments are closed."
 msgstr "Komentāri ir slēgti."
 
-#: ../content.php:3 ../inc/theme-parts.php:174
+#: ../content.php:6 ../inc/theme-parts.php:187
 msgid "Read more &rarr;"
 msgstr "Lasīt tālāk &rarr;"
 
@@ -35,71 +35,79 @@ msgstr "Meklēšanas rezultāti"
 msgid "Sorry, but nothing matched your search criteria."
 msgstr "Atvaino, bet nekas netika atrasts."
 
-#: ../searchform.php:3 ../searchform.php:4 ../searchform.php:5
+#: ../searchform.php:3
 msgid "Search"
 msgstr "Meklēt"
 
-#: ../inc/theme-admin.php:6
+#: ../inc/theme-admin.php:13
+msgid "Customize"
+msgstr "Konfigurēt"
+
+#: ../inc/theme-admin.php:24
 msgid "Show Gravatar image in the header"
 msgstr "Rādīt Gravatar attēlu galvenē"
 
-#: ../inc/theme-admin.php:11
+#: ../inc/theme-admin.php:29
 msgid "Enable breadcrumbs"
 msgstr "Iespējot \"breadcrumbs\""
 
-#: ../inc/theme-admin.php:16
+#: ../inc/theme-admin.php:34
+msgid "Place featured images after title"
+msgstr "Radīt \"featured image\" pēc virsraksta"
+
+#: ../inc/theme-admin.php:39
 msgid "Enable footer menu"
 msgstr "Iespējot kājenes izvēlni"
 
-#: ../inc/theme-admin.php:21
+#: ../inc/theme-admin.php:44
 msgid "Use Gravatar as favicon"
 msgstr "Lietot Gravatar kā logo"
 
-#: ../inc/theme-admin.php:28
+#: ../inc/theme-admin.php:56
 msgid "Links"
 msgstr "Saites"
 
-#: ../inc/theme-admin.php:36
+#: ../inc/theme-admin.php:64
 msgid "Header text"
 msgstr "Teksts galvenē"
 
-#: ../inc/theme-admin.php:45
+#: ../inc/theme-admin.php:73
 msgid "Background"
 msgstr "Fons"
 
-#: ../inc/theme-admin.php:54
+#: ../inc/theme-admin.php:82
 msgid "Text"
 msgstr "Teksts"
 
-#: ../inc/theme-admin.php:62
+#: ../inc/theme-admin.php:90
 msgid "Headlines"
 msgstr "Virsraksti"
 
-#: ../inc/theme-admin.php:97
+#: ../inc/theme-admin.php:130
 msgid "Default"
 msgstr "Noklusētais"
 
-#: ../inc/theme-admin.php:105
+#: ../inc/theme-admin.php:138
 msgid "Headings"
 msgstr "Virsraksti"
 
-#: ../inc/theme-admin.php:112
+#: ../inc/theme-admin.php:145
 msgid "Body text"
 msgstr "Teksts galvenē"
 
-#: ../inc/theme-admin.php:154
+#: ../inc/theme-admin.php:187
 msgid "Fonts"
 msgstr "Fonti"
 
-#: ../inc/theme-admin.php:155
+#: ../inc/theme-admin.php:188
 msgid "Choose fonts for headings and body text."
 msgstr "Izvēlies fontus virsrakstiem un tekstam."
 
-#: ../inc/theme-admin.php:182
-msgid "Header & Footer"
-msgstr "Galvene un kājene"
+#: ../inc/theme-admin.php:215
+msgid "Features"
+msgstr "Īpašas iespējas"
 
-#: ../inc/theme-admin.php:183
+#: ../inc/theme-admin.php:216
 msgid "Enable or disable certain theme elements."
 msgstr "Iespējo vai atspējo konkrētus tēmas elementus."
 
@@ -108,38 +116,44 @@ msgstr "Iespējo vai atspējo konkrētus tēmas elementus."
 msgid "%s RSS feed"
 msgstr "%s RSS barotne"
 
-#: ../inc/theme-parts.php:46 ../inc/theme-parts.php:145
+#: ../inc/theme-parts.php:54 ../inc/theme-parts.php:158
 msgid "&larr; Previous"
 msgstr "&larr; Iepriekšējā"
 
-#: ../inc/theme-parts.php:47 ../inc/theme-parts.php:145
+#: ../inc/theme-parts.php:55 ../inc/theme-parts.php:158
 msgid "Next &rarr;"
 msgstr "Nākamā &rarr;"
 
-#: ../inc/theme-parts.php:76
+#: ../inc/theme-parts.php:84
 msgid "Add Comment"
 msgstr "Pievieno komentāru"
 
-#: ../inc/theme-parts.php:118
+#: ../inc/theme-parts.php:127
 msgid "Home"
 msgstr "Sākums"
 
-#: ../inc/theme-parts.php:147
+#: ../inc/theme-parts.php:160
 msgid "Older &rarr;"
 msgstr "Vecāki &rarr;"
 
-#: ../inc/theme-parts.php:147
+#: ../inc/theme-parts.php:160
 msgid "&larr; Newer"
 msgstr "&larr; Jaunāki"
 
-#: ../inc/theme-parts.php:162
+#: ../inc/theme-parts.php:175
 #, php-format
 msgid "Page %d of %d"
 msgstr "%d. lapa no %d"
 
 #: ../inc/theme-setup.php:19
-msgid "Footer"
-msgstr "Kājene"
+msgid "Footer Widget Area"
+msgstr "Kājenes mantiņu laukums"
+
+#~ msgid "Header & Footer"
+#~ msgstr "Galvene un kājene"
+
+#~ msgid "Footer"
+#~ msgstr "Kājene"
 
 #~ msgid "Colors"
 #~ msgstr "Krāsas"
