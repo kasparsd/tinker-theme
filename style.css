@@ -121,7 +121,11 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .commentlist .children { float:left; margin:1.5em 0 0 1em; padding:0 0 0 25px; border-left:1px solid #ddd; }
 
 #commentform { float:left; width:100%; clear:both; margin-bottom:1.5em; }
-#commentform label { padding:0.15em 0; float:left; width:6em; position:relative; left:-7em; margin-right:-8em; }
+#commentform .comment-form-author label,
+#commentform .comment-form-email label,
+#commentform .comment-form-url label,
+#commentform .comment-form-comment label,
+#commentform .form-submit label { padding:0.15em 0; float:left; width:6em; position:relative; left:-7em; margin-right:-8em; }
 #commentform p { clear:both; padding-left:7em; margin-bottom:0.75em; padding-right:0.5em; }
 #commentform input { font:inherit; }
 #commentform input[type="text"],
