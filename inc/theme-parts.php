@@ -1,7 +1,7 @@
 <?php
 
 
-add_action( 'after_post_title', 'featured_image_header_single', 20 );
+add_action( 'after_post_title', 'featured_image_header_single' );
 
 function featured_image_header_single() {
 	if ( ! has_post_thumbnail() || is_search() || is_404() )

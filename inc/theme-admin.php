@@ -13,6 +13,7 @@ function maybe_add_theme_customizer_menu() {
 		add_theme_page( __( 'Customize' ), __( 'Customize' ), 'edit_theme_options', 'customize.php' );
 }
 
+
 /**
  * Filters we allow the user to disable/enable
  * @var array
@@ -26,6 +27,11 @@ $tinker_filters = array(
 		'tinklog_breadcrumb' => array( 
 			'hook' => 'content_before', 
 			'label' => __( 'Enable breadcrumbs', 'tinker' ),
+			'default' => true
+		),
+		'featured_image_header_single' => array(
+			'hook' => 'after_post_title',
+			'label' => __( 'Place featured images after title', 'tinker' ),
 			'default' => true
 		),
 		'tinker_credits_footer' => array( 
@@ -205,7 +211,7 @@ function tinker_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'tinker-elements',
 		array(
-			'title' => __( 'Header & Footer', 'tinker' ),
+			'title' => __( 'Features', 'tinker' ),
 			'description' => __( 'Enable or disable certain theme elements.', 'tinker' ),
 			'priority' => 50
 		)
