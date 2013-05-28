@@ -121,6 +121,7 @@ $tinker_google_fonts = array(
 		'Arimo:400,700,400italic,700italic',
 		'Libre+Baskerville:400,700,400italic',
 		'Abril+Fatface',
+		'Coustard'
 	);
 
 sort( $tinker_google_fonts );
