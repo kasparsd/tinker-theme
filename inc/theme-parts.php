@@ -1,9 +1,9 @@
 <?php
 
 
-add_action( 'after_post_title', 'featured_image_header_single' );
+add_action( 'after_post_title', 'tinker_featured_image_header_single' );
 
-function featured_image_header_single() {
+function tinker_featured_image_header_single() {
 	if ( ! has_post_thumbnail() || is_search() || is_404() )
 		return;
 
@@ -25,9 +25,9 @@ function featured_image_header_single() {
 }
 
 
-add_filter( 'post_class', 'has_featured_image_class' );
+add_filter( 'post_class', 'tinker_has_featured_image_class' );
 
-function has_featured_image_class( $classes ) {
+function tinker_has_featured_image_class( $classes ) {
 	if ( has_post_thumbnail() )
 		$classes[] = 'has-featured-image';
 
@@ -35,9 +35,9 @@ function has_featured_image_class( $classes ) {
 }
 
 
-add_action( 'post_header', 'add_tinker_attachemnt_parent' );
+add_action( 'post_header', 'tinker_add_attachemnt_parent' );
 
-function add_tinker_attachemnt_parent() {
+function tinker_add_attachemnt_parent() {
 	if ( ! is_attachment() )
 		return;
 
@@ -57,9 +57,9 @@ function add_tinker_attachemnt_parent() {
 }
 
 
-add_action( 'post_footer', 'add_post_meta_header', 5 );
+add_action( 'post_footer', 'tinker_add_post_meta_header', 5 );
 
-function add_post_meta_header() {
+function tinker_add_post_meta_header() {
 	if ( is_page() || is_404() )
 		return;
 
@@ -97,9 +97,9 @@ function add_post_meta_header() {
 }
 
 
-add_action( 'logo_image', 'maybe_add_blog_avatar' );
+add_action( 'logo_image', 'maybe_add_tinker_blog_avatar' );
 
-function maybe_add_blog_avatar() {
+function maybe_add_tinker_blog_avatar() {
 	echo get_avatar( get_option( 'admin_email' ), 64 );
 }
 
@@ -177,9 +177,9 @@ function tinklog_pagination() {
 }
 
 
-add_filter( 'get_the_excerpt', 'excerpt_add_readmore' );
+add_filter( 'get_the_excerpt', 'tinker_excerpt_add_readmore' );
 
-function excerpt_add_readmore( $content ) {
+function tinker_excerpt_add_readmore( $content ) {
 	return sprintf( 
 			'%s <a href="%s" class="read-more excerpt-read-more">%s</a>', 
 			$content, 
