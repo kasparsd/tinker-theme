@@ -4,6 +4,8 @@
 add_action( 'header_after', 'add_main_menu' );
 
 function add_main_menu() {
+	echo '<a id="nav-main-toggle" href="#nav-main"></a>';
+
 	wp_nav_menu( array( 
 			'theme_location' => 'main_menu',
 			'container_id' => 'nav-main',
