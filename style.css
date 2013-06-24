@@ -44,6 +44,8 @@ object, iframe { max-width:100%; }
 #nav-main li li a:hover { }
 #nav-main li:hover ul { display:block; }
 
+#nav-main-toggle { visibility:hidden; }
+
 .wrap-content-main,
 #content-main { float:left; width:100%; clear:both; }
 
@@ -165,20 +167,21 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 #content-main .sharedaddy h3 { font:inherit; font-size:0.9em; margin:0; color:inherit; }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 	#footer { margin-left:0; width:100%; }
 	#footer .widget { width:100%; margin:0 0 2em 0; }
 
-	#nav-main { position:relative; width:100%; clear:both; margin:-3.5em 0 0 0; z-index:10; }
-	#nav-main .menu { float:right; margin:0 0 -100em -100em; padding-bottom:1em; width:100%; background:#222; visibility:hidden; }
+	#nav-main { position:relative; width:100%; clear:both; margin:0; z-index:10; }
+	#nav-main .menu { float:right; margin:1em 0 -100em 0; padding-bottom:0.5em; width:100%; background:#222; visibility:hidden; }
 	#nav-main .menu a { float:none; color:#eee; }
 	#nav-main .menu li { width:100%; border-top:1px solid #333; }
 	#nav-main .sub-menu { position:relative; width:100%; display:block; margin:0; padding:0; }
 	#nav-main .sub-menu a { padding-left:2em; }
 	#nav-main .sub-menu li { border:none; }
-	#nav-main:before { padding:1em 1.25em; background:#fff; float:right; margin:0 0 -100em -100em; content:'+'; display:block; position:relative; z-index:10; }
-	#nav-main:hover .menu, #nav-main:target .menu { visibility:visible; }
-	#nav-main:hover:before, #nav-main:target:before { display:none; }
+	#nav-main-toggle { visibility:visible; font-size:1.5em; line-height:1; padding:0.5em 0.75em; color:inherit; background-color:#fff; text-transform:uppercase; float:right; margin:-0.75em 0; display:block; position:relative; z-index:10; }
+	#nav-main-toggle:hover { text-decoration:none; }
+	#nav-main-toggle:hover { display:none; }
+	#nav-main:target .menu { visibility:visible; margin-bottom:0; }
 
 	#nav-footer { display:none; }
 }

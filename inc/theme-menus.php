@@ -4,15 +4,22 @@
 add_action( 'header_after', 'add_main_menu' );
 
 function add_main_menu() {
-	echo '<a id="nav-main-toggle" href="#nav-main"></a>';
+	$menu = wp_nav_menu( array( 
+				'theme_location' => 'main_menu',
+				'container_id' => 'nav-main',
+				'fallback_cb' => false,
+				'depth' => 2,
+				'echo' => false
+			) 
+		);
 
-	wp_nav_menu( array( 
-			'theme_location' => 'main_menu',
-			'container_id' => 'nav-main',
-			'fallback_cb' => false,
-			'depth' => 2
-		) 
-	);
+	if ( ! empty( $menu ) )
+		printf(
+			'<a id="nav-main-toggle" href="#nav-main" title="%s">&#9776;</a>
+			%s',
+			__( 'Menu', 'tinker' ),
+			$menu
+		);
 }
 
 

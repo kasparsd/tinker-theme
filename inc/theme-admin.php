@@ -66,7 +66,7 @@ $tinker_colors = array(
 			'sanitize_callback' => 'sanitize_hex_color',
 			'css' => array( 
 				'#header, .breadcrumbs, .pagination, .wrap-footer' => 'color',
-				'#header li .sub-menu' => 'background-color'
+				'#header li .sub-menu, #nav-main-toggle' => 'background-color'
 			)
 		),
 		'background-color' => array(
@@ -75,7 +75,7 @@ $tinker_colors = array(
 			'sanitize_callback' => 'sanitize_hex_color',
 			'css' => array( 
 				'body' => 'background-color',
-				'#nav-main .sub-menu a' => 'color'
+				'#nav-main .sub-menu a, #nav-main-toggle, #nav-main-toggle:hover' => 'color'
 			)
 		),
 		'text-color' => array( 
