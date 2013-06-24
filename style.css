@@ -2,9 +2,9 @@
 Theme Name: Tinker Blog Theme
 Theme URI: http://preseto.com/themes/tinker
 GitHub URI: https://github.com/kasparsd/tinker-theme
-Description: For Creators, Bloggers and Writers
-Version: 1.2.2
-Author: Kaspars Dambis 
+Description: For creators, bloggers and writers
+Version: 1.2.3
+Author: Preseto Themes
 Author URI: http://preseto.com
 */
 
@@ -20,6 +20,7 @@ a { color:#386FA5; text-decoration:none; }
 a:hover { text-decoration:underline; }
 a img { border:none; }
 form, input, textarea { font:inherit; }
+object, iframe { max-width:100%; }
 
 #soul { max-width:650px; margin:0 auto; }
 
@@ -31,15 +32,15 @@ form, input, textarea { font:inherit; }
 #logo em { font-size:0.9em; font-style:normal; padding-top:0.3em; margin-left:0.1em; display:block; display:none; }
 #logo img { float:left; margin:-1.5em 1em 0 0; border:none; }
 
-#nav-main { float:right; margin:-1em -1em 0 -1em; padding:0; line-height:1; }
+#nav-main { float:right; margin:-1em -1em 0 -1em; padding:0; line-height:1; position:relative; }
 #nav-main ul, #nav-main li { list-style:none; display:block; margin:0; padding:0; }
 #nav-main li { float:left; }
 #nav-main a { color:inherit; display:block; padding:1em; }
 #nav-main .current-menu-item > a, #nav-main .current-menu-ancestor > a, #nav-main .current_page_parent > a { color:inherit; font-weight:bold; }
 #nav-main .current-menu-item { }
-#nav-main li .sub-menu { display:none; background:#222; float:left; position:relative; padding:0.4em 0; margin:-0.1em -100em -100em 0; z-index:5; }
-#nav-main .sub-menu li { width:auto; float:none; clear:both; }
-#nav-main .sub-menu a { float:none; color:#eee; }
+#nav-main .sub-menu { display:none; background:#222; float:left; position:absolute; padding:0.4em 0; margin:-0.1em 0 -100em 0; z-index:5; }
+#nav-main .sub-menu li { line-height:1.2; width:auto; float:none; clear:both; }
+#nav-main .sub-menu a { float:none; color:#eee; padding:0.75em 1em; }
 #nav-main li li a:hover { }
 #nav-main li:hover ul { display:block; }
 
@@ -167,6 +168,19 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 @media only screen and (max-width: 600px) {
 	#footer { margin-left:0; width:100%; }
 	#footer .widget { width:100%; margin:0 0 2em 0; }
+
+	#nav-main { position:relative; width:100%; clear:both; margin:-3.5em 0 0 0; z-index:50; }
+	#nav-main .menu { float:right; margin:0 0 -100em -100em; width:100%; background:#222; visibility:hidden; }
+	#nav-main .menu a { float:none; color:#eee; }
+	#nav-main .menu li { width:100%; border-top:1px solid #333; }
+	#nav-main .sub-menu { position:relative; width:100%; display:block; margin:0; padding:0; }
+	#nav-main .sub-menu a { padding-left:2em; }
+	#nav-main .sub-menu li { border:none; }
+	#nav-main:before { padding:1em 1.25em; background:#fff; float:right; margin:0 0 -100em -100em; content:'☰'; display:block; position:relative; z-index:10; }
+	#nav-main:hover .menu { visibility:visible; }
+	#nav-main:hover:before { display:none; }
+
+	#nav-footer { display:none; }
 }
 
 
