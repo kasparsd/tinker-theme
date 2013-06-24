@@ -178,7 +178,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 	#nav-main .sub-menu { position:relative; width:100%; display:block; margin:0; padding:0; }
 	#nav-main .sub-menu a { padding-left:2em; }
 	#nav-main .sub-menu li { border:none; }
-	#nav-main-toggle { visibility:visible; font-size:1.5em; line-height:1; padding:0.5em 0.75em; color:inherit; background-color:#fff; text-transform:uppercase; float:right; margin:-0.75em 0; display:block; position:relative; z-index:10; }
+	#nav-main-toggle { visibility:visible; font-size:1.5em; line-height:1; padding:0.5em 0.75em; color:#ddd; background-color:#222; text-transform:uppercase; float:right; margin:-0.75em 0; display:block; position:relative; z-index:10; }
 	#nav-main-toggle:hover { text-decoration:none; }
 	#nav-main-toggle:hover { display:none; }
 	#nav-main:target .menu { visibility:visible; margin-bottom:0; }
