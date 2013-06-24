@@ -19,7 +19,7 @@ function maybe_add_theme_customizer_menu() {
  * @var array
  */
 $tinker_filters = array(
-		'maybe_add_blog_avatar' => array( 
+		'maybe_add_tinker_blog_avatar' => array( 
 			'hook' => 'logo_image', 
 			'label' => __( 'Show Gravatar image in the header', 'tinker' ),
 			'default' => true
@@ -29,7 +29,7 @@ $tinker_filters = array(
 			'label' => __( 'Enable breadcrumbs', 'tinker' ),
 			'default' => true
 		),
-		'featured_image_header_single' => array(
+		'tinker_featured_image_header_single' => array(
 			'hook' => 'after_post_title',
 			'label' => __( 'Place featured images after title', 'tinker' ),
 			'default' => true
