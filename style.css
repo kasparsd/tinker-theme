@@ -179,6 +179,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 	#nav-main .sub-menu a { padding-left:2em; }
 	#nav-main .sub-menu li { border:none; }
 	#nav-main-toggle { visibility:visible; font-size:1.5em; line-height:1; padding:0.5em 0.75em; color:#ddd; background-color:#222; text-transform:uppercase; float:right; margin:-0.75em 0; display:block; position:relative; z-index:10; }
+	#nav-main-toggle:before { float:left; content:''; width:1em; height:3px; margin:0.5em 0; background:#fff; box-shadow: 0 -0.25em 0 0 #fff, 0 0.25em 0 0 #fff; }
 	#nav-main-toggle:hover { text-decoration:none; }
 	#nav-main-toggle:hover { display:none; }
 	#nav-main:target .menu { visibility:visible; margin-bottom:0; }

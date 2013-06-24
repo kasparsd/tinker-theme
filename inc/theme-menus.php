@@ -15,7 +15,7 @@ function add_main_menu() {
 
 	if ( ! empty( $menu ) )
 		printf(
-			'<a id="nav-main-toggle" href="#nav-main" title="%s">&#9776;</a>
+			'<a id="nav-main-toggle" href="#nav-main" title="%s"></a>
 			%s',
 			__( 'Menu', 'tinker' ),
 			$menu
