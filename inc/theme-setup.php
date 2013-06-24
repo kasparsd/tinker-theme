@@ -27,5 +27,5 @@ register_sidebar( array(
 add_action( 'wp_enqueue_scripts', 'tinker_base_css' );
 
 function tinker_base_css() {
-	wp_enqueue_style( 'tinker-base-css', get_template_directory_uri() . '/style.css', null, '1372102478' );
+	wp_enqueue_style( 'tinker-base-css', get_template_directory_uri() . '/style.css', null, '137210250' );
 }
