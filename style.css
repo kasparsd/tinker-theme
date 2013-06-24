@@ -169,7 +169,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 	#footer { margin-left:0; width:100%; }
 	#footer .widget { width:100%; margin:0 0 2em 0; }
 
-	#nav-main { position:relative; width:100%; clear:both; margin:-3.5em 0 0 0; z-index:50; }
+	#nav-main { position:relative; width:100%; clear:both; margin:-3.5em 0 0 0; z-index:10; }
 	#nav-main .menu { float:right; margin:0 0 -100em -100em; width:100%; background:#222; visibility:hidden; }
 	#nav-main .menu a { float:none; color:#eee; }
 	#nav-main .menu li { width:100%; border-top:1px solid #333; }
@@ -177,8 +177,8 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 	#nav-main .sub-menu a { padding-left:2em; }
 	#nav-main .sub-menu li { border:none; }
 	#nav-main:before { padding:1em 1.25em; background:#fff; float:right; margin:0 0 -100em -100em; content:'\2630'; display:block; position:relative; z-index:10; }
-	#nav-main:hover .menu { visibility:visible; }
-	#nav-main:hover:before { display:none; }
+	#nav-main:hover .menu, #nav-main:active .menu { visibility:visible; }
+	#nav-main:hover:before, #nav-main:active:before { display:none; }
 
 	#nav-footer { display:none; }
 }
