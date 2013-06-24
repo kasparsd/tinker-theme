@@ -75,7 +75,7 @@ $tinker_colors = array(
 			'sanitize_callback' => 'sanitize_hex_color',
 			'css' => array( 
 				'body' => 'background-color',
-				'#nav-main .sub-menu a, #nav-main-toggle, #nav-main-toggle:hover' => 'color'
+				'#nav-main .sub-menu a, #nav-main-toggle:before' => 'color'
 			)
 		),
 		'text-color' => array( 
