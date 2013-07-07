@@ -27,11 +27,13 @@ if ( comments_open() || have_comments() ) : ?>
 			</ol>
 
 			<?php
+				// Comments are closed but there were some left before they were closed
 				if ( ! comments_open() && get_comments_number() )
 					printf( '<p class="nocomments">%s</p>', _e( 'Comments are closed.' , 'tinker' ) );
 
-				// Allow comment pagination
-				paginate_comments_links();
+				// Comment pagination enabled, show the links
+				if ( get_option('page_comments') && get_comment_pages_count() )
+					printf( '<div class="pagination">%s</div>', paginate_comments_links( array( 'echo' => false ) ) );
 			?>
 		<?php endif; ?>
 
