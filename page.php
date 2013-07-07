@@ -1,1 +1,1 @@
-<?php include( 'single.php' );
+<?php get_template_part( 'single' );
