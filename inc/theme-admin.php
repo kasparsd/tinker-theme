@@ -52,18 +52,23 @@ $tinker_filters = array(
  * @var array
  */
 $tinker_colors = array(
+		'background_color' => array(
+			'label' => __( 'Background', 'tinker' ),
+			'default' => 'dddddd',
+			'css' => array( 
+				'#nav-main .sub-menu a, #nav-main-toggle:before' => 'color'
+			)
+		),
 		'link-color' => array( 
 			'label' => __( 'Links', 'tinker' ),
-			'default' => '#1e73be',
-			'sanitize_callback' => 'sanitize_hex_color',
+			'default' => '1e73be',
 			'css' => array( 
 				'a' => 'color'
 			)
 		),
 		'header-color' => array( 
 			'label' => __( 'Header text', 'tinker' ),
-			'default' => '#222222',
-			'sanitize_callback' => 'sanitize_hex_color',
+			'default' => '222222',
 			'css' => array( 
 				'#header, .breadcrumbs, .pagination, .wrap-footer' => 'color',
 				'#header li .sub-menu, #nav-main-toggle' => 'background-color'
@@ -71,16 +76,14 @@ $tinker_colors = array(
 		),
 		'text-color' => array( 
 			'label' => __( 'Text', 'tinker' ),
-			'default' => '#333333',
-			'sanitize_callback' => 'sanitize_hex_color',
+			'default' => '333333',
 			'css' => array( 
 				'body' => 'color' 
 			)
 		),
 		'headline-color' => array( 
 			'label' => __( 'Headlines', 'tinker' ),
-			'default' => '#333333',
-			'sanitize_callback' => 'sanitize_hex_color',
+			'default' => '333333',
 			'css' => array( 
 				'article .entry-title' => 'color' 
 			)
@@ -152,7 +155,16 @@ function tinker_customizer( $wp_customize ) {
 	 */
 
 	foreach ( $tinker_colors as $color_name => $color_options ) {
-		$wp_customize->add_setting( $color_name, $color_options );
+		$wp_customize->add_setting( 
+			$color_name, 
+			array_merge(
+				array(
+					'sanitize_js_callback' => 'maybe_hash_hex_color',
+					'sanitize_callback' => 'sanitize_hex_color_no_hash',
+				),
+				$color_options 
+			)
+		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
@@ -161,7 +173,7 @@ function tinker_customizer( $wp_customize ) {
 				array(
 					'label' => $color_options['label'],
 					'section' => 'colors',
-					'settings' => $color_name,
+					'settings' => $color_name
 				)
 			)
 		);
@@ -203,7 +215,7 @@ function tinker_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'tinker-elements',
 		array(
-			'title' => __( 'Features', 'tinker' ),
+			'title' => __( 'Tinker Features', 'tinker' ),
 			'description' => __( 'Enable or disable certain theme elements.', 'tinker' ),
 			'priority' => 50
 		)
@@ -224,6 +236,7 @@ function tinker_customizer( $wp_customize ) {
 }
 
 
+// We hook into wp_head just like wp-head-callback does
 add_action( 'wp_head', 'tinker_custom_styles' );
 
 function tinker_custom_styles() {
@@ -235,14 +248,17 @@ function tinker_custom_styles() {
 	foreach ( $tinker_colors as $color => $settings ) {
 		$mod_value = get_theme_mod( $color, $settings['default'] );
 
+		// Ensure that we don't have the hex in front
+		$mod_value = ltrim( $mod_value, '#' );
+
 		if ( strcasecmp( $mod_value, $settings['default'] ) )
 			foreach ( $settings['css'] as $selector => $property )
-				$styles[] = sprintf( '%s { %s:%s; }', $selector, $property, $mod_value );
+				$styles[] = sprintf( '%s { %s: #%s; }', $selector, $property, $mod_value );
 	}
 
 	// Custom fonts
 	foreach ( $tinker_fonts as $font => $font_settings ) {
-		$mod_value = get_theme_mod( $font, '' );
+		$mod_value = get_theme_mod( $font, null );
 		
 		if ( ! empty( $mod_value ) )
 			foreach ( $font_settings['css'] as $selector => $property )
