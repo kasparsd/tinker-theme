@@ -10,7 +10,7 @@ function maybe_add_theme_customizer_menu() {
 	global $wp_version;
 	
 	if ( version_compare( '3.6', $wp_version ) )
-		add_theme_page( __( 'Customize' ), __( 'Customize' ), 'edit_theme_options', 'customize.php' );
+		add_theme_page( __( 'Customize', 'tinker' ), __( 'Customize', 'tinker' ), 'edit_theme_options', 'customize.php' );
 }
 
 
@@ -67,15 +67,6 @@ $tinker_colors = array(
 			'css' => array( 
 				'#header, .breadcrumbs, .pagination, .wrap-footer' => 'color',
 				'#header li .sub-menu, #nav-main-toggle' => 'background-color'
-			)
-		),
-		'background-color' => array(
-			'label' => __( 'Background', 'tinker' ),
-			'default' => '#dddddd',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'css' => array( 
-				'body' => 'background-color',
-				'#nav-main .sub-menu a, #nav-main-toggle:before' => 'color'
 			)
 		),
 		'text-color' => array( 
