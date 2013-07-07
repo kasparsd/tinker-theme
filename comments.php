@@ -29,6 +29,9 @@ if ( comments_open() || have_comments() ) : ?>
 			<?php
 				if ( ! comments_open() && get_comments_number() )
 					printf( '<p class="nocomments">%s</p>', _e( 'Comments are closed.' , 'tinker' ) );
+
+				// Allow comment pagination
+				paginate_comments_links();
 			?>
 		<?php endif; ?>
 
