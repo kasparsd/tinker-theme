@@ -14,7 +14,7 @@ function tinker_theme_setup() {
 		$content_width = 650;
 
 	// Support custom background colors and images
-	add_theme_support( 'custom-background', array( 'default-color' => 'eeeeee' ) );
+	add_theme_support( 'custom-background', array( 'default-color' => 'dddddd' ) );
 
 	// Add RSS links, etc.
 	add_theme_support( 'automatic-feed-links' );
