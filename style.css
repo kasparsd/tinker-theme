@@ -3,7 +3,7 @@ Theme Name: Tinker Blog Theme
 Theme URI: http://preseto.com/themes/tinker
 GitHub URI: https://github.com/kasparsd/tinker-theme
 Description: For creators, bloggers and writers
-Version: 1.2.5
+Version: 1.2.6
 Author: Preseto Themes
 Author URI: http://preseto.com
 License: GNU General Public License v2 or later
@@ -85,11 +85,13 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .post-featured-header img { min-width:100%; max-width:100%; height:auto; background:#ddd; }
 .post-featured-header { padding:0; position:relative; min-width:100%; height:auto; margin-top:1.5em; }
 .more-link { font-weight:bold; }
-.entry-content iframe, .entry-content object { min-width:100%; } 
+.entry-content iframe, .entry-content object { min-width:100%; }
+.sticky {}
 
 .post pre, .page pre { font-size:0.9em; background:#eee; padding:0.5em 1em; margin:2em 0; overflow:auto; overflow-y:none; }
 
 .gallery img { margin:0 auto; }
+.gallery .gallery-caption {}
 
 .attachment article .entry-title { margin-top:0; }
 .attachment img { display:block; margin:0 auto; }
@@ -124,6 +126,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .commentlist cite { font-style:normal; }
 .commentlist .reply { margin:0; font-size:0.9em; }
 .commentlist .children { float:left; margin:1.5em 0 0 1em; padding:0 0 0 25px; border-left:1px solid #ddd; }
+.commentlist .bypostauthor {}
 
 #commentform { float:left; width:100%; clear:both; margin-bottom:1.5em; }
 #commentform .comment-form-author label,
