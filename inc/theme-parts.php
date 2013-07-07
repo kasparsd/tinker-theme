@@ -124,7 +124,7 @@ function tinklog_breadcrumb() {
 	$page_ancestors = get_ancestors( get_queried_object_id(), 'page' );
 
 	if ( $page_on_front )
-		$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $page_on_front ), __('Home') );
+		$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $page_on_front ), __( 'Home', 'tinker' ) );
 
 	if ( is_page() && ! empty( $page_ancestors ) )
 		foreach ( array_reverse( $page_ancestors ) as $ancestor )
