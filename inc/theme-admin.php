@@ -345,7 +345,8 @@ function tinker_custom_login_logo() {
 	printf( 
 		'<style type="text/css">
 			.login h1 a { 
-				background:url("%s/avatar/%s?s=64") no-repeat center center; 
+				background:url("%s/avatar/%s?s=64") no-repeat center center;
+				background-size:auto; 
 				height:80px; 
 			}
 		</style>',
