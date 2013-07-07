@@ -9,7 +9,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php do_action( 'post_header' ) ?>
 		
 		<?php if ( get_the_title() ) : ?>
-			<h1 class="fn entry-title" role="heading">
+			<h1 class="entry-title" role="heading">
 				<?php the_title(); ?>
 			</h1>
 		<?php endif; ?>
