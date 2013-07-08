@@ -1,10 +1,64 @@
 <?php
 
 
+/**
+ * Add headings to archive pages
+ */
+add_action( 'content_before', 'tinker_add_archive_heading', 15 );
+
+function tinker_add_archive_heading() {
+	if ( ! is_archive() )
+		return;
+
+	$extra = array();
+	$heading = null;
+
+	if ( is_author() )
+		$author = get_user_by( 'login', get_query_var('author_name') );
+
+	if ( is_tax() || is_category() || is_tag() )
+		$heading = single_term_title( null, false );
+	elseif ( is_day() )
+		$heading = get_the_date();
+	elseif ( is_month() )
+		$heading = get_the_date( _x( 'F Y', 'monthly archives date format', 'tinker' ) );
+	elseif ( is_year() )
+		$heading = get_the_date( _x( 'Y', 'yearly archives date format', 'tinker' ) );
+	elseif ( is_author() && $author )
+		$heading = sprintf( __( 'Author: %s', 'tinker' ), $author->display_name );
+	else
+		$heading = __( 'Archives', 'tinker' );
+
+	if ( category_description() )
+		$extra[] = sprintf(
+				'<div class="archive-description">%s</div>',
+				category_description()
+			);
+
+	if ( is_author() && $author )
+		$extra[] = sprintf(
+				'<div class="archive-description">%s</div>',
+				wpautop( $author->user_description )
+			);
+
+	printf(
+		'<div class="archive-header">
+			<h1 class="archive-heading">%s</h1>
+			%s
+		</div>',
+		esc_html( $heading ),
+		implode( '', $extra )
+	);
+}
+
+
+/**
+ * Prepend featured image to posts on archive and single pages
+ */
 add_action( 'after_post_title', 'tinker_featured_image_header_single' );
 
 function tinker_featured_image_header_single() {
-	if ( ! has_post_thumbnail() || is_search() || is_404() )
+	if ( is_search() || is_404() || ! has_post_thumbnail() )
 		return;
 
 	if ( is_page() )
@@ -25,6 +79,9 @@ function tinker_featured_image_header_single() {
 }
 
 
+/**
+ * Add a CSS class to post wraps if post has a featured image
+ */
 add_filter( 'post_class', 'tinker_has_featured_image_class' );
 
 function tinker_has_featured_image_class( $classes ) {
@@ -35,6 +92,9 @@ function tinker_has_featured_image_class( $classes ) {
 }
 
 
+/**
+ * Add links to attachment pages
+ */
 add_action( 'post_header', 'tinker_add_attachemnt_parent' );
 
 function tinker_add_attachemnt_parent() {
@@ -57,6 +117,9 @@ function tinker_add_attachemnt_parent() {
 }
 
 
+/**
+ * Add post meta links
+ */
 add_action( 'post_footer', 'tinker_add_post_meta_header', 5 );
 
 function tinker_add_post_meta_header() {
@@ -97,6 +160,9 @@ function tinker_add_post_meta_header() {
 }
 
 
+/**
+ * Use Gravatar profile image (using the admin email) as the logo
+ */
 add_action( 'logo_image', 'maybe_add_tinker_blog_avatar' );
 
 function maybe_add_tinker_blog_avatar() {
@@ -104,7 +170,9 @@ function maybe_add_tinker_blog_avatar() {
 }
 
 
-
+/**
+ * Add breadcrumbs
+ */
 add_action( 'content_before', 'tinklog_breadcrumb' );
 
 function tinklog_breadcrumb() {
@@ -136,14 +204,17 @@ function tinklog_breadcrumb() {
 	if ( is_single() && $category_list = get_the_category_list( ',' ) )
 		$path[] = $category_list;
 
-	if ( is_category() )
+	if ( is_category() && get_query_var( 'paged' ) )
 		$path[] = sprintf( '<a href="%s">%s</a>', get_category_link( get_queried_object_id() ), single_cat_title( false, false ) );
 
-	if ( count( $path ) > 1 )
+	if ( ! is_front_page() )
 		printf( '<p class="breadcrumbs">%s &rsaquo;</p>', implode( ' &rsaquo; ', $path ) );
 }
 
 
+/**
+ * Add pagination to all index/archive pages
+ */
 add_action( 'content_after', 'tinklog_pagination' );
 
 function tinklog_pagination() {
@@ -177,6 +248,9 @@ function tinklog_pagination() {
 }
 
 
+/**
+ * Append the Read more link to the excerpt on archive/index pages
+ */
 add_filter( 'get_the_excerpt', 'tinker_excerpt_add_readmore' );
 
 function tinker_excerpt_add_readmore( $content ) {
