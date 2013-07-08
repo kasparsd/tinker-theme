@@ -188,21 +188,19 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 
 
 @media only screen and (max-width: 700px) {
-	body { padding:0 0.5em; }
-
 	#footer { margin-left:0; width:100%; }
 	#footer .widget { width:100%; margin:0 0 2em 0; }
 
-	#content-main article { padding-left:10px; padding-right:10px; }
+	#content-main article { padding-left:15px; padding-right:15px; }
 	.post-featured-header, 
-	article .entry-title a { margin-left:-10px; margin-right:-10px; padding-left:10px; padding-right:10px; }
+	article .entry-title a { margin-left:-15px; margin-right:-15px; padding-left:15px; padding-right:15px; }
 
 	#nav-main { position:relative; width:100%; clear:both; margin:0; z-index:10; }
-	#nav-main .menu { float:right; margin:1em 0 -100em 0; padding-bottom:0.5em; width:100%; background:#222; visibility:hidden; }
-	#nav-main .menu a { float:none; color:#eee; }
+	#nav-main .menu { float:right; margin:1em 0 -100em 0; padding-bottom:0.5em; width:100%; background-color:#222; visibility:hidden; }
+	#nav-main .menu a { float:none; color:#fff; }
 	#nav-main .menu li { width:100%; border-top:1px solid #333; }
-	#nav-main .sub-menu { position:relative; width:100%; display:block; margin:0; padding:0 0 0.5em 0; }
-	#nav-main .sub-menu a { padding-left:2em; }
+	#nav-main .menu .sub-menu { background-color:#222; position:relative; width:100%; display:block; margin:0; padding:0 0 0.5em 0; }
+	#nav-main .sub-menu li a { color:#fff; padding-left:2em; }
 	#nav-main .sub-menu li { border:none; }
 	#nav-main-toggle { visibility:visible; font-size:1.5em; line-height:1; padding:0.75em 0.75em; color:#ddd; background-color:#222; text-transform:uppercase; float:right; margin:-0.75em 0; display:block; position:relative; z-index:10; }
 	#nav-main-toggle:before { display:block; content:''; width:1em; height:3px; border-top:3px solid; border-bottom:9px double; }
