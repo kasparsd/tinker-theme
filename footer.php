@@ -20,7 +20,13 @@
 
 <?php wp_footer(); ?>
 
-<!-- <?php printf( '%s queries in %s seconds on %s', get_num_queries(), timer_stop(1), date('r') ); ?>  -->
+<!-- 
+	Tinker Theme by Preseto at http://preseto.com
+	<?php 
+		// Display server performance
+		printf( '%s queries in %s seconds on %s', get_num_queries(), timer_stop(0,4), date('r') ); 
+	?>  
+-->
 
 </body>
 </html>
