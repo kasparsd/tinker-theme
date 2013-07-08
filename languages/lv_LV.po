@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tinker Theme for WordPress\n"
-"POT-Creation-Date: 2013-05-28 19:59+0100\n"
-"PO-Revision-Date: 2013-05-28 19:59+0100\n"
+"POT-Creation-Date: 2013-07-08 12:33+0100\n"
+"PO-Revision-Date: 2013-07-08 12:35+0100\n"
 "Last-Translator: Kaspars <kaspars@konstruktors.com>\n"
 "Language-Team:  <kaspars@konstruktors.com>\n"
 "Language: Latvian\n"
@@ -15,15 +15,19 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../comments.php:15 ../inc/theme-parts.php:82
+#: ../404.php:7
+msgid "Page Not Found"
+msgstr "Lapa nav atrasta"
+
+#: ../comments.php:15 ../inc/theme-parts.php:145
 msgid "One Comment"
 msgstr "Viens komentārs"
 
-#: ../comments.php:31
+#: ../comments.php:32
 msgid "Comments are closed."
 msgstr "Komentāri ir slēgti."
 
-#: ../content.php:6 ../inc/theme-parts.php:187
+#: ../content.php:6 ../inc/theme-parts.php:261
 msgid "Read more &rarr;"
 msgstr "Lasīt tālāk &rarr;"
 
@@ -35,7 +39,7 @@ msgstr "Meklēšanas rezultāti"
 msgid "Sorry, but nothing matched your search criteria."
 msgstr "Atvaino, bet nekas netika atrasts."
 
-#: ../searchform.php:3
+#: ../searchform.php:3 ../searchform.php:4 ../searchform.php:5
 msgid "Search"
 msgstr "Meklēt"
 
@@ -64,50 +68,50 @@ msgid "Use Gravatar as favicon"
 msgstr "Lietot Gravatar kā logo"
 
 #: ../inc/theme-admin.php:56
-msgid "Links"
-msgstr "Saites"
-
-#: ../inc/theme-admin.php:64
-msgid "Header text"
-msgstr "Teksts galvenē"
-
-#: ../inc/theme-admin.php:73
 msgid "Background"
 msgstr "Fons"
 
-#: ../inc/theme-admin.php:82
+#: ../inc/theme-admin.php:63
+msgid "Links"
+msgstr "Saites"
+
+#: ../inc/theme-admin.php:70
+msgid "Header text"
+msgstr "Teksts galvenē"
+
+#: ../inc/theme-admin.php:78
 msgid "Text"
 msgstr "Teksts"
 
-#: ../inc/theme-admin.php:90
+#: ../inc/theme-admin.php:85
 msgid "Headlines"
 msgstr "Virsraksti"
 
-#: ../inc/theme-admin.php:130
+#: ../inc/theme-admin.php:125
 msgid "Default"
 msgstr "Noklusētais"
 
-#: ../inc/theme-admin.php:138
+#: ../inc/theme-admin.php:133
 msgid "Headings"
 msgstr "Virsraksti"
 
-#: ../inc/theme-admin.php:145
+#: ../inc/theme-admin.php:140
 msgid "Body text"
 msgstr "Teksts galvenē"
 
-#: ../inc/theme-admin.php:187
+#: ../inc/theme-admin.php:191
 msgid "Fonts"
 msgstr "Fonti"
 
-#: ../inc/theme-admin.php:188
+#: ../inc/theme-admin.php:192
 msgid "Choose fonts for headings and body text."
 msgstr "Izvēlies fontus virsrakstiem un tekstam."
 
-#: ../inc/theme-admin.php:215
-msgid "Features"
-msgstr "Īpašas iespējas"
+#: ../inc/theme-admin.php:219
+msgid "Tinker Features"
+msgstr "Tinker iespējas"
 
-#: ../inc/theme-admin.php:216
+#: ../inc/theme-admin.php:220
 msgid "Enable or disable certain theme elements."
 msgstr "Iespējo vai atspējo konkrētus tēmas elementus."
 
@@ -116,36 +120,49 @@ msgstr "Iespējo vai atspējo konkrētus tēmas elementus."
 msgid "%s RSS feed"
 msgstr "%s RSS barotne"
 
-#: ../inc/theme-parts.php:54 ../inc/theme-parts.php:158
+#: ../inc/theme-menus.php:20
+msgid "Menu"
+msgstr "Izvēlne"
+
+#: ../inc/theme-parts.php:28
+#, php-format
+msgid "Author: %s"
+msgstr "Autors: %s"
+
+#: ../inc/theme-parts.php:30
+msgid "Archives"
+msgstr "Arhīvs"
+
+#: ../inc/theme-parts.php:114 ../inc/theme-parts.php:229
 msgid "&larr; Previous"
 msgstr "&larr; Iepriekšējā"
 
-#: ../inc/theme-parts.php:55 ../inc/theme-parts.php:158
+#: ../inc/theme-parts.php:115 ../inc/theme-parts.php:229
 msgid "Next &rarr;"
 msgstr "Nākamā &rarr;"
 
-#: ../inc/theme-parts.php:84
+#: ../inc/theme-parts.php:147
 msgid "Add Comment"
 msgstr "Pievieno komentāru"
 
-#: ../inc/theme-parts.php:127
+#: ../inc/theme-parts.php:195
 msgid "Home"
 msgstr "Sākums"
 
-#: ../inc/theme-parts.php:160
+#: ../inc/theme-parts.php:231
 msgid "Older &rarr;"
 msgstr "Vecāki &rarr;"
 
-#: ../inc/theme-parts.php:160
+#: ../inc/theme-parts.php:231
 msgid "&larr; Newer"
 msgstr "&larr; Jaunāki"
 
-#: ../inc/theme-parts.php:175
+#: ../inc/theme-parts.php:246
 #, php-format
 msgid "Page %d of %d"
 msgstr "%d. lapa no %d"
 
-#: ../inc/theme-setup.php:19
+#: ../inc/theme-setup.php:35
 msgid "Footer Widget Area"
 msgstr "Kājenes mantiņu laukums"
 
