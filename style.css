@@ -188,9 +188,6 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 
 
 @media only screen and (max-width: 700px) {
-	#footer { margin-left:0; width:100%; }
-	#footer .widget { width:100%; margin:0 0 2em 0; }
-
 	#content-main article { padding-left:15px; padding-right:15px; }
 	.post-featured-header, 
 	article .entry-title a { margin-left:-15px; margin-right:-15px; padding-left:15px; padding-right:15px; }
@@ -209,6 +206,9 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 	#nav-main:target .menu { visibility:visible; margin-bottom:0; }
 
 	#nav-footer { display:none; }
+
+	#footer { margin-left:0; width:100%; }
+	#footer .widget { width:100%; margin:0 0 2em 0; }
 }
 
 
