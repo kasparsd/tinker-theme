@@ -92,7 +92,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .post-meta a { padding:0.5em; font-weight:bold; }
 .post-meta-footer .meta-time { color:#666; margin-right:0.5em; }
 .meta-comment-count { margin-left:0.5em; }
-.post-featured-header img { min-width:100%; max-width:100%; height:auto; background:#ddd; }
+.post-featured-header img { min-width:100%; max-width:100%; height:auto; }
 .post-featured-header { padding:0; position:relative; min-width:100%; height:auto; margin-top:1.5em; }
 .more-link { font-weight:bold; }
 .entry-content iframe, .entry-content object { min-width:100%; }
