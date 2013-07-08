@@ -70,8 +70,8 @@ $tinker_colors = array(
 			'label' => __( 'Header text', 'tinker' ),
 			'default' => '222222',
 			'css' => array( 
-				'#header, #nav-main .sub-menu a, .breadcrumbs, .pagination, .wrap-footer, .archive-header, .archive-heading, .archive-header a' => 'color',
-				'#nav-main-toggle' => 'background-color'
+				'#header, .breadcrumbs, .pagination, .wrap-footer, .archive-header, .archive-heading, .archive-header a' => 'color',
+				'#nav-main-toggle, #nav-main .sub-menu' => 'background-color'
 			)
 		),
 		'text-color' => array( 
@@ -83,7 +83,7 @@ $tinker_colors = array(
 		),
 		'headline-color' => array( 
 			'label' => __( 'Headlines', 'tinker' ),
-			'default' => '333333',
+			'default' => '222222',
 			'css' => array( 
 				'article .entry-title' => 'color'
 			)
@@ -267,7 +267,7 @@ function tinker_custom_styles() {
 						'%s { %s: "%s", sans-serif; }', 
 						$selector, 
 						$property, 
-						str_replace( '+', ' ', array_shift( explode( ':', $mod_value ) ) ) 
+						esc_attr( str_replace( '+', ' ', array_shift( explode( ':', $mod_value ) ) ) )
 					);
 	}
 
