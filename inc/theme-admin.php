@@ -116,7 +116,7 @@ $tinker_google_fonts = array(
 		'Libre+Baskerville:400,700,400italic',
 		'Abril+Fatface',
 		'Coustard',
-		'Merriweather:400,400italic,700,700italic&subset=latin,latin-ext'
+		'Merriweather:400,400italic,700,700italic'
 	);
 
 sort( $tinker_google_fonts );
@@ -256,6 +256,8 @@ function tinker_custom_styles() {
 			foreach ( $settings['css'] as $selector => $property )
 				$styles[] = sprintf( '%s { %s: #%s; }', $selector, $property, $mod_value );
 	}
+
+	$tinker_fonts = array_unique( $tinker_fonts );
 
 	// Custom fonts
 	foreach ( $tinker_fonts as $font => $font_settings ) {
