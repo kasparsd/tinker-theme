@@ -115,7 +115,8 @@ $tinker_google_fonts = array(
 		'Arimo:400,700,400italic,700italic',
 		'Libre+Baskerville:400,700,400italic',
 		'Abril+Fatface',
-		'Coustard'
+		'Coustard',
+		'Merriweather:400,400italic,700,700italic&subset=latin,latin-ext'
 	);
 
 sort( $tinker_google_fonts );
@@ -125,7 +126,7 @@ $tinker_font_choices = array(
 	);
 
 foreach ( $tinker_google_fonts as $font_uri )
-	$tinker_font_choices[ $font_uri ] = str_replace( '+', ' ', current( explode( ':', $font_uri ) ) );
+	$tinker_font_choices[ $font_uri ] = str_replace( '+', ' ', array_shift( explode( ':', $font_uri ) ) );
 
 $tinker_fonts = array(
 		'heading-font' => array( 
