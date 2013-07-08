@@ -177,6 +177,7 @@ add_action( 'content_before', 'tinklog_breadcrumb' );
 
 function tinklog_breadcrumb() {
 	$path = array();
+	$page_ancestors = null;
 
 	// Use WordPress SEO breadcrumbs if plugin installed
 	if ( function_exists( 'yoast_breadcrumb' ) ) {
@@ -187,26 +188,34 @@ function tinklog_breadcrumb() {
 	if ( is_404() || is_search() )
 		return; 
 
-	$page_on_front = get_option( 'page_on_front' );
+	// Get blog index page, if any
 	$page_for_posts = get_option( 'page_for_posts' );
-	$page_ancestors = get_ancestors( get_queried_object_id(), 'page' );
 
-	if ( $page_on_front )
-		$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $page_on_front ), __( 'Home', 'tinker' ) );
+	// Get page ancestors, if any
+	if ( is_page() )
+		$page_ancestors = get_ancestors( get_queried_object_id(), 'page' );
 
+	// Add home link
+	$path[] = sprintf( '<a href="%s">%s</a>', home_url('/'), __( 'Home', 'tinker' ) );
+
+	// Add page ancestors
 	if ( is_page() && ! empty( $page_ancestors ) )
 		foreach ( array_reverse( $page_ancestors ) as $ancestor )
 			$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $ancestor ), esc_html( get_the_title( $ancestor ) ) );
 
+	// Add blog index page if on single post or archive
 	if ( ( is_single() || is_archive() || get_query_var( 'paged' ) ) && $page_for_posts )
 		$path[] = sprintf( '<a href="%s">%s</a>', get_permalink( $page_for_posts ), get_the_title( $page_for_posts ) );
 
+	// Add category links, if on single post
 	if ( is_single() && $category_list = get_the_category_list( ',' ) )
 		$path[] = $category_list;
 
+	// Add category links on category archive pages
 	if ( is_category() && get_query_var( 'paged' ) )
 		$path[] = sprintf( '<a href="%s">%s</a>', get_category_link( get_queried_object_id() ), single_cat_title( false, false ) );
 
+	// Print breadcrumb if not on front page
 	if ( ! is_front_page() )
 		printf( '<p class="breadcrumbs">%s &rsaquo;</p>', implode( ' &rsaquo; ', $path ) );
 }
