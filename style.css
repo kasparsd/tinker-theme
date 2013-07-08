@@ -29,10 +29,10 @@ dl dt { font-weight:bold; }
 
 #soul { max-width:650px; margin:0 auto; }
 
-.wrap-header { float:left; width:100%; clear:both; padding:3em 0; }
+.wrap-header { float:left; width:100%; clear:both; padding:3em 0 1em 0; }
 #header { color:inherit; }
 
-#logo { float:left; line-height:1; margin:0; padding:0; }
+#logo { float:left; line-height:1; margin:0 0 2em 0; padding:0; }
 #logo a { font-size:1em; color:inherit; display:block; padding:1em; margin:-1em 0 0 -1em; position:relative; z-index:2; }
 #logo em { font-size:0.9em; font-style:normal; padding-top:0.3em; margin-left:0.1em; display:block; display:none; }
 #logo img { float:left; margin:-1.5em 1em 0 0; border:none; }
@@ -59,7 +59,8 @@ dl dt { font-weight:bold; }
 .breadcrumbs .breadcrumb_last { margin-left:0.25em; }
  
 #content-main article { padding:0.5em 25px; background-color:#fff; margin-bottom:2.5em; position:relative; }
-#content-main article:after { content:'.'; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
+#content-main article:after, 
+.commentlist .children:after { content:'.'; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
 
 .archive-header { padding:0 0 1.5em 0; }
 .archive-heading { margin:0 0 0.75em 0; }
@@ -89,7 +90,7 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .page .has-featured-image .entry-title { margin-bottom:1em; }
 .entry-content blockquote { font-style:italic; }
 .post-meta-footer { color:#666; font-size:0.9em; margin-top:1.5em; margin-bottom:1em; padding-top:1em; border-top:1px solid #ddd; }
-.post-meta a { padding:0.5em; font-weight:bold; }
+.post-meta a { display:inline-block; padding:0.5em; margin-right:-0.5em; font-weight:bold; }
 .post-meta-footer .meta-time { color:#666; margin-right:0.5em; }
 .meta-comment-count { margin-left:0.5em; }
 .post-featured-header img { min-width:100%; max-width:100%; height:auto; }
@@ -121,8 +122,11 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 
 .pagination { vertical-align:middle; display:block; float:left; width:100%; margin-bottom:3em; clear:both; text-align:center; }
 .pagination .links { font-weight:bold; font-size:1.1em; }
-.pagination .status { margin-left:2em; }
-.pagination a { color:inherit; padding:1em 0.75em; }
+.pagination .status { margin-left:2em; font-size:0.9em; }
+.pagination .current,
+.pagination a { font-weight:bold; padding:1em 0.75em; }
+.post-pagination a { color:inherit; }
+.comments .pagination { padding-top:1em; border-top:1px solid #ddd; }
 
 .comments-wrap { float:left; width:100%; clear:both; background:#fff; margin-bottom:3em; }
 .comments { padding:0 25px; }
@@ -140,8 +144,8 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .commentlist .comment-meta a { color:#999; }
 .commentlist cite { font-style:normal; }
 .commentlist .reply { margin:0; font-size:0.9em; }
-.commentlist .children { float:left; margin:1.5em 0 0 1em; padding:0 0 0 25px; border-left:1px solid #ddd; }
-.commentlist .bypostauthor {}
+.commentlist .children { margin:1.5em 0 0 0; padding:0 0 0 25px; border-left:1px solid #ddd; }
+.commentlist .bypostauthor .comment-author { border-top:thick solid; }
 
 #commentform { float:left; width:100%; clear:both; margin-bottom:1.5em; }
 #commentform .comment-form-author label,
