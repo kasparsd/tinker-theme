@@ -190,7 +190,7 @@ function tinker_customizer( $wp_customize ) {
 		array(
 			'title' => __( 'Fonts', 'tinker' ),
 			'description' => __( 'Choose fonts for headings and body text.', 'tinker' ),
-			'priority' => 45
+			'priority' => 50
 		)
 	);
 
@@ -218,7 +218,7 @@ function tinker_customizer( $wp_customize ) {
 		array(
 			'title' => __( 'Tinker Features', 'tinker' ),
 			'description' => __( 'Enable or disable certain theme elements.', 'tinker' ),
-			'priority' => 50
+			'priority' => 30
 		)
 	);
 
@@ -260,7 +260,7 @@ function tinker_custom_styles() {
 	// Custom fonts
 	foreach ( $tinker_fonts as $font => $font_settings ) {
 		$mod_value = get_theme_mod( $font, null );
-		
+
 		if ( ! empty( $mod_value ) )
 			foreach ( $font_settings['css'] as $selector => $property )
 				$styles[] = sprintf( 
@@ -286,8 +286,6 @@ function tinker_custom_fonts() {
 
 	$queue = array();
 
-	$tinker_fonts = array_unique( $tinker_fonts );
-
 	// CSS styles for google fonts
 	foreach ( $tinker_fonts as $font => $font_settings ) {
 		$mod_value = get_theme_mod( $font, null );
@@ -310,7 +308,7 @@ function tinker_custom_fonts() {
 					s.parentNode.insertBefore(wf, s);
 				})();
 			</script>', 
-			implode( ', ', $queue )
+			implode( ', ', array_unique( $queue ) )
 		);	
 	
 }
