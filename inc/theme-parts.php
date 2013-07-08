@@ -38,7 +38,7 @@ function tinker_add_archive_heading() {
 	if ( is_author() && $author )
 		$extra[] = sprintf(
 				'<div class="archive-description">%s</div>',
-				wpautop( $author->user_description )
+				wptexturize( $author->user_description )
 			);
 
 	printf(
