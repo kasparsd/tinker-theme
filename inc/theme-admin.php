@@ -116,7 +116,8 @@ $tinker_google_fonts = array(
 		'Libre+Baskerville:400,700,400italic',
 		'Abril+Fatface',
 		'Coustard',
-		'Merriweather:400,400italic,700,700italic'
+		'Merriweather:400,400italic,700,700italic',
+		'Merriweather+Sans:400,700,700italic,400italic'
 	);
 
 sort( $tinker_google_fonts );
