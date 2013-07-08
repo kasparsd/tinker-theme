@@ -257,15 +257,18 @@ function tinker_custom_styles() {
 				$styles[] = sprintf( '%s { %s: #%s; }', $selector, $property, $mod_value );
 	}
 
-	$tinker_fonts = array_unique( $tinker_fonts );
-
 	// Custom fonts
 	foreach ( $tinker_fonts as $font => $font_settings ) {
 		$mod_value = get_theme_mod( $font, null );
 		
 		if ( ! empty( $mod_value ) )
 			foreach ( $font_settings['css'] as $selector => $property )
-				$styles[] = sprintf( '%s { %s: "%s", sans-serif; }', $selector, $property, str_replace( '+', ' ', current( explode( ':', $mod_value ) ) ) );
+				$styles[] = sprintf( 
+						'%s { %s: "%s", sans-serif; }', 
+						$selector, 
+						$property, 
+						str_replace( '+', ' ', array_shift( explode( ':', $mod_value ) ) ) 
+					);
 	}
 
 	if ( ! empty( $styles ) )
@@ -283,12 +286,14 @@ function tinker_custom_fonts() {
 
 	$queue = array();
 
+	$tinker_fonts = array_unique( $tinker_fonts );
+
 	// CSS styles for google fonts
 	foreach ( $tinker_fonts as $font => $font_settings ) {
-		$mod_value = get_theme_mod( $font, '' );
+		$mod_value = get_theme_mod( $font, null );
 		
-		if ( ! empty( $mod_value ) && ! array_key_exists( $font, $queue ) )
-			$queue[ $font ] = sprintf( '"%s"', $mod_value );
+		if ( ! empty( $mod_value ) )
+			$queue[] = sprintf( '"%s"', esc_attr( $mod_value ) );
 	}
 
 	if ( ! empty( $queue ) )
