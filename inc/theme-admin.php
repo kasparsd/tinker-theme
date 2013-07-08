@@ -70,8 +70,8 @@ $tinker_colors = array(
 			'label' => __( 'Header text', 'tinker' ),
 			'default' => '222222',
 			'css' => array( 
-				'#header, .breadcrumbs, .pagination, .wrap-footer' => 'color',
-				'#header li .sub-menu, #nav-main-toggle' => 'background-color'
+				'#header, #nav-main .sub-menu a, .breadcrumbs, .pagination, .wrap-footer, .archive-header, .archive-heading, .archive-header a' => 'color',
+				'#nav-main-toggle' => 'background-color'
 			)
 		),
 		'text-color' => array( 
@@ -85,7 +85,7 @@ $tinker_colors = array(
 			'label' => __( 'Headlines', 'tinker' ),
 			'default' => '333333',
 			'css' => array( 
-				'article .entry-title' => 'color' 
+				'article .entry-title' => 'color'
 			)
 		)
 	);
