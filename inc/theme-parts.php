@@ -247,7 +247,7 @@ function tinklog_pagination() {
 
 	if ( ! empty( $nav ) )
 		printf( 
-			'<nav class="pagination">
+			'<nav class="pagination post-pagination">
 				<span class="links">%s</span> 
 				<span class="status">%s</span>
 			</nav>', 
