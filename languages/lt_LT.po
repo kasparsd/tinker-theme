@@ -1,0 +1,169 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tinker Theme for WordPress\n"
+"POT-Creation-Date: 2013-07-08 12:33+0100\n"
+"PO-Revision-Date: 2013-08-09 22:50+0200\n"
+"Last-Translator: Naglis Jonaitis <njonaitis@gmail.com>\n"
+"Language-Team:  <kaspars@konstruktors.com>\n"
+"Language: Lithuanian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_n;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:7
+msgid "Page Not Found"
+msgstr "Puslapis nerastas"
+
+#: ../comments.php:15 ../inc/theme-parts.php:145
+msgid "One Comment"
+msgstr "1 komentaras"
+
+#: ../comments.php:32
+msgid "Comments are closed."
+msgstr "Komentavimo galimybė išjungta."
+
+#: ../content.php:6 ../inc/theme-parts.php:261
+msgid "Read more &rarr;"
+msgstr "Skaityti toliau &rarr;"
+
+#: ../search.php:8
+msgid "Search Results"
+msgstr "Paieškos rezultatai"
+
+#: ../search.php:25
+msgid "Sorry, but nothing matched your search criteria."
+msgstr "Apgailestaujame, nieko neradome pagal Jūsų kriterijų."
+
+#: ../searchform.php:3 ../searchform.php:4 ../searchform.php:5
+msgid "Search"
+msgstr "Ieškoti"
+
+#: ../inc/theme-admin.php:13
+msgid "Customize"
+msgstr "Konfigūruoti"
+
+#: ../inc/theme-admin.php:24
+msgid "Show Gravatar image in the header"
+msgstr "Rodyti Gravatar pseudoportretą atraštėje"
+
+#: ../inc/theme-admin.php:29
+msgid "Enable breadcrumbs"
+msgstr "Įjungti atgalinio kelio nuorodas"
+
+#: ../inc/theme-admin.php:34
+msgid "Place featured images after title"
+msgstr "Įterpti spec. paveikslėlius po pavadinimu"
+
+#: ../inc/theme-admin.php:39
+msgid "Enable footer menu"
+msgstr "Įjungti paraštės meniu"
+
+#: ../inc/theme-admin.php:44
+msgid "Use Gravatar as favicon"
+msgstr "Naudoti Gravatar pseudoportretą kaip favicon piktogramą"
+
+#: ../inc/theme-admin.php:56
+msgid "Background"
+msgstr "Fono nustatymai"
+
+#: ../inc/theme-admin.php:63
+msgid "Links"
+msgstr "Nuorodos"
+
+#: ../inc/theme-admin.php:70
+msgid "Header text"
+msgstr "Antraštės tekstas"
+
+#: ../inc/theme-admin.php:78
+msgid "Text"
+msgstr "Tekstas"
+
+#: ../inc/theme-admin.php:85
+msgid "Headlines"
+msgstr "Įrašų pavadinimai"
+
+#: ../inc/theme-admin.php:125
+msgid "Default"
+msgstr "Numatytasis"
+
+#: ../inc/theme-admin.php:133
+msgid "Headings"
+msgstr "Antraštės"
+
+#: ../inc/theme-admin.php:140
+msgid "Body text"
+msgstr "Puslapio tekstas"
+
+#: ../inc/theme-admin.php:191
+msgid "Fonts"
+msgstr "Šriftai"
+
+#: ../inc/theme-admin.php:192
+msgid "Choose fonts for headings and body text."
+msgstr "Komentavimo galimybė išjungta."
+
+#: ../inc/theme-admin.php:219
+msgid "Tinker Features"
+msgstr "Tinker savybės"
+
+#: ../inc/theme-admin.php:220
+msgid "Enable or disable certain theme elements."
+msgstr "Įjungti ar išjungti tam tikrus temos elementus."
+
+#: ../inc/theme-features.php:24
+#, php-format
+msgid "%s RSS feed"
+msgstr "%s RSS srautas"
+
+#: ../inc/theme-menus.php:20
+msgid "Menu"
+msgstr "Meniu"
+
+#: ../inc/theme-parts.php:28
+#, php-format
+msgid "Author: %s"
+msgstr "Autorius: %s"
+
+#: ../inc/theme-parts.php:30
+msgid "Archives"
+msgstr "Archyvai"
+
+#: ../inc/theme-parts.php:114 ../inc/theme-parts.php:229
+msgid "&larr; Previous"
+msgstr "&larr; Ankstesnis"
+
+#: ../inc/theme-parts.php:115 ../inc/theme-parts.php:229
+msgid "Next &rarr;"
+msgstr "Kitas &rarr;"
+
+#: ../inc/theme-parts.php:147
+msgid "Add Comment"
+msgstr "Palikti komentarą"
+
+#: ../inc/theme-parts.php:195
+msgid "Home"
+msgstr "Pradžia"
+
+#: ../inc/theme-parts.php:231
+msgid "Older &rarr;"
+msgstr "Senesni &rarr;"
+
+#: ../inc/theme-parts.php:231
+msgid "&larr; Newer"
+msgstr "&larr; Naujesni"
+
+#: ../inc/theme-parts.php:246
+#, php-format
+msgid "Page %d of %d"
+msgstr "Puslapis %d iš %d"
+
+#: ../inc/theme-setup.php:35
+msgid "Footer Widget Area"
+msgstr "Paraštės valdiklių sritis"
