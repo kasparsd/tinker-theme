@@ -128,7 +128,7 @@ $tinker_font_choices = array(
 
 foreach ( $tinker_google_fonts as $font_uri )
 	if ( $font_uri_parts = explode( ':', $font_uri ) )
-		$tinker_font_choices[ $font_uri ] = str_replace( '+', ' ', array_shift( $font_uri_parts ) );
+		$tinker_font_choices[ $font_uri ] = str_replace( '+', ' ', $font_uri_parts[0] );
 
 $tinker_fonts = array(
 		'heading-font' => array( 
@@ -269,7 +269,7 @@ function tinker_custom_styles() {
 						'%s { %s: "%s", sans-serif; }', 
 						$selector, 
 						$property, 
-						esc_attr( str_replace( '+', ' ', array_shift( $mod_value_parts ) ) )
+						esc_attr( str_replace( '+', ' ', $mod_value_parts[0] ) )
 					);
 	}
 
