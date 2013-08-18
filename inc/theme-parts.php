@@ -80,6 +80,19 @@ function tinker_featured_image_header_single() {
 
 
 /**
+ * Add hfeed class to body tag on index/archive pages
+ */
+add_filter( 'body_class', 'tinker_body_class' );
+
+function tinker_body_class( $classes ) {
+	if ( ! is_singular() )
+		$classes[] = 'hfeed';
+
+	return $classes;
+}
+
+
+/**
  * Add a CSS class to post wraps if post has a featured image
  */
 add_filter( 'post_class', 'tinker_has_featured_image_class' );
@@ -126,18 +139,34 @@ function tinker_add_post_meta_header() {
 	if ( is_page() || is_404() )
 		return;
 
-	$elements = array();
-
-	$elements['time'] = sprintf( 
-			'<span class="meta-time time"><abbr title="%s">%s</abbr></span>', 
-			get_the_time('r'), 
+	$elements = array(
+		'published' => sprintf( 
+			'<span class="meta-published time published">
+				<abbr title="%s">%s</abbr>
+			</span>', 
+			esc_attr( get_the_time('r') ),  
 			get_the_time( get_option( 'date_format' ) )
-		);
-
-	$elements['category'] = sprintf( 
-			'<span class="meta-cat category">%s</span>', 
+		),
+		'updated' => sprintf( 
+			'<span class="meta-updated time updated">
+				<span class="value-title" title="%s"></span>
+			</span>', 
+			esc_attr( get_the_modified_date('r') )
+		),
+		'author' => sprintf( 
+			'<span class="meta-author author vcard">
+				<span class="name fn">
+					<span class="value-title" title="%s"></span>
+				</span>
+			</span>', 
+			esc_attr( get_the_author() )
+		),
+		'category' => sprintf( 
+			'<span class="meta-category category">%s</span>', 
 			get_the_category_list( ',' ) 
-		);
+		),
+		'tags' => get_the_tag_list( '<span class="meta-tags tags">', '', '</span>' )
+	);
 
 	$comment_count = get_comments_number();
 
@@ -152,6 +181,8 @@ function tinker_add_post_meta_header() {
 				get_permalink(), 
 				$comment_text 
 			);
+
+	$elements = apply_filters( 'tinker_post_meta', $elements );
 
 	printf( 
 		'<div class="post-meta-footer post-meta">%s</div>',
