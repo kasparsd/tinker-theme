@@ -87,7 +87,6 @@ article .entry-title a { display:block; padding-bottom:0.3em; padding-top:0.3em;
 .entry-content li { margin-bottom:0.5em; }
 .entry-content ul li { list-style-type:square; }
 .wp-caption-text { font-size:0.9em; color:#666; text-align:center; margin:1em 0 1.5em 0; }
-.page .has-featured-image .entry-title { margin-bottom:1em; }
 .entry-content blockquote { font-style:italic; }
 .post-meta-footer { color:#666; font-size:0.9em; margin-top:1.5em; margin-bottom:1em; padding-top:1em; border-top:1px solid #ddd; }
 .post-meta a { display:inline-block; padding:0.5em; margin-right:-0.5em; font-weight:bold; }
