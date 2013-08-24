@@ -1,11 +1,9 @@
 <?php
 
 
-add_filter( 'wp_title', 'base_page_title', 10, 2 );
+add_filter( 'wp_title', 'tinker_head_title', 10, 2 );
 
-function base_page_title( $title, $sep ) {
-	$sep = apply_filters( 'base_title_sep', $sep );
-
+function tinker_head_title( $title, $sep ) {
 	if ( is_front_page() )
 		return sprintf( '%s %s %s', get_bloginfo( 'name' ), $sep, get_bloginfo( 'description' ) );
 
