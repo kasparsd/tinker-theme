@@ -26,6 +26,14 @@ function add_main_menu() {
 add_action( 'after_footer', 'tinker_credits_footer' );
 
 function tinker_credits_footer() {
+	$footer_menu = wp_nav_menu( array( 
+			'theme_location' => 'footer_menu',
+			'container_id' => 'nav-footer',
+			'fallback_cb' => false,
+			'echo' => false,
+			'depth' => 1
+		) );
+	
 	printf( 
 		'<div class="footer-menu-wrap">
 			<strong class="home"><a href="%s">%s</a></strong>
@@ -33,13 +41,7 @@ function tinker_credits_footer() {
 		</div>',
 		home_url(),
 		esc_html( get_bloginfo('name') ),
-		wp_nav_menu( array( 
-			'theme_location' => 'footer_menu',
-			'container_id' => 'nav-footer',
-			'fallback_cb' => false,
-			'echo' => false,
-			'depth' => 1
-		) )
+		$footer_menu
 	);
 }
 
