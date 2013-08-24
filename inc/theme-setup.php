@@ -4,12 +4,12 @@
 add_action( 'after_setup_theme', 'tinker_theme_setup' );
 
 function tinker_theme_setup() {
-	global $content_width;
-
+	
 	// Enable localization
 	load_theme_textdomain( 'tinker', get_template_directory() . '/languages' );
 
 	// Required only for theme check, not used in theme
+	global $content_width;
 	if ( ! isset( $content_width ) ) 
 		$content_width = 650;
 
@@ -21,6 +21,9 @@ function tinker_theme_setup() {
 
 	// Enable post thumbnails
 	add_theme_support( 'post-thumbnails' );
+
+	// Add HTML5 syntax support for certain elements
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
 	// Add an image size for featured images
 	add_image_size( 'featured-header', 800, 400, true );
