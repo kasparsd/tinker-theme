@@ -39,7 +39,7 @@ function tinker_theme_setup() {
 		'after_title' => '</h1>',
 	) );
 
-	if ( is_singular() ) 
+	if ( is_singular() && comments_open() ) 
 		wp_enqueue_script( 'comment-reply' );
 
 }
