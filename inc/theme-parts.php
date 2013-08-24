@@ -61,7 +61,7 @@ function tinker_featured_image_header_single() {
 	if ( is_search() || is_404() || ! has_post_thumbnail() )
 		return;
 
-	if ( is_page() )
+	if ( is_singular() )
 		printf( 
 			'<div class="post-featured-header">
 				%s
