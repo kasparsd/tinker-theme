@@ -49,7 +49,7 @@ dl dt { font-weight:bold; }
 #nav-main li li a:hover { }
 #nav-main li:hover ul { display:block; }
 
-#nav-main-toggle { display:none; font-size:1.5em; line-height:1; padding:0.75em 0.75em; color:#ddd; background-color:#222; text-transform:uppercase; float:right; margin:-0.75em 0; display:block; position:relative; z-index:10; }
+#nav-main-toggle { display:none; font-size:1.5em; line-height:1; padding:0.75em 0.75em; color:#ddd; background-color:#222; text-transform:uppercase; float:right; margin:-0.75em 0; position:relative; z-index:10; }
 #nav-main-toggle:before { display:block; content:''; width:1em; height:3px; border-top:3px solid; border-bottom:9px double; }
 
 .wrap-content-main,
