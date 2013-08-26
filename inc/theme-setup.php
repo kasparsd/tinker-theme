@@ -23,7 +23,7 @@ function tinker_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Add HTML5 syntax support for certain elements
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+	// add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
 	// Add an image size for featured images
 	add_image_size( 'featured-header', 800, 400, true );
