@@ -80,7 +80,6 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 .entry-content .alignnone { max-width:100%; display:block; margin:1.5em 0; }
 .entry-content ul,
 .entry-content ol { margin-left:0; padding-left:0; margin-left:2em; }
-.entry-content li { margin-bottom:0.5em; }
 .entry-content ul li { list-style-type:square; }
 .wp-caption-text { font-size:0.9em; color:#666; text-align:center; margin:1em 0 1.5em 0; }
 .entry-content blockquote { font-style:italic; }
