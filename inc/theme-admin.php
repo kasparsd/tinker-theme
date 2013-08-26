@@ -43,7 +43,12 @@ $tinker_filters = array(
 			'hook' => 'wp_head', 
 			'label' => __( 'Use Gravatar as favicon', 'tinker' ),
 			'default' => true
-		)	
+		),
+		'tinker_add_blog_index_heading' => array( 
+			'hook' => 'content_before', 
+			'label' => __( 'Display blog index page content', 'tinker' ),
+			'default' => false
+		)
 	);
 
 

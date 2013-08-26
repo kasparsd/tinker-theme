@@ -29,25 +29,59 @@ function tinker_add_archive_heading() {
 	else
 		$heading = __( 'Archives', 'tinker' );
 
+	if ( is_home() && $page_for_posts = get_option('page_for_posts') ) {
+		$post_for_posts = get_post( $page_for_posts );
+
+		$heading = get_the_title( $post_for_posts );
+		$extra[] = $post_for_posts->post_excerpt;
+	}
+
 	if ( category_description() )
 		$extra[] = sprintf(
-				'<div class="archive-description">%s</div>',
+				'<div class="index-description">%s</div>',
 				category_description()
 			);
 
 	if ( is_author() && $author )
 		$extra[] = sprintf(
-				'<div class="archive-description">%s</div>',
+				'<div class="index-description">%s</div>',
 				wptexturize( $author->user_description )
 			);
 
 	printf(
-		'<div class="archive-header">
-			<h1 class="archive-heading">%s</h1>
+		'<div class="index-header">
+			<h1 class="index-heading">%s</h1>
 			%s
 		</div>',
 		esc_html( $heading ),
 		implode( '', $extra )
+	);
+}
+
+
+/**
+ * Add headings to blog index page
+ */
+add_action( 'content_before', 'tinker_add_blog_index_heading' );
+
+function tinker_add_blog_index_heading() {
+	if ( ! is_home() )
+		return;
+
+	$page_for_posts = get_option('page_for_posts');
+
+	if ( ! $page_for_posts )
+		return;
+
+	$index_post = get_post( $page_for_posts );
+
+	printf(
+		'<div class="index-header">
+			<h1 class="index-heading">%s</h1>
+			<div class="index-description">%s</div>
+		</div>',
+		apply_filters( 'the_title', $index_post->post_title ),
+		apply_filters( 'the_content', $index_post->post_content )
 	);
 }
 
