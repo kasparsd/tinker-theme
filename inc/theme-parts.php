@@ -80,8 +80,8 @@ function tinker_add_blog_index_heading() {
 			<h1 class="index-heading">%s</h1>
 			<div class="index-description">%s</div>
 		</div>',
-		apply_filters( 'the_title', $index_post->post_title ),
-		apply_filters( 'the_content', $index_post->post_content )
+		apply_filters( 'the_title', $index_post->post_title, array( 'context' => 'index' ) ),
+		apply_filters( 'the_content', $index_post->post_content, array( 'context' => 'index' ) )
 	);
 }
 
