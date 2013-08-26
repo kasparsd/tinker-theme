@@ -4,13 +4,20 @@
 add_filter( 'wp_title', 'tinker_head_title', 10, 2 );
 
 function tinker_head_title( $title, $sep ) {
+
+	if ( is_feed() )
+		return $title;
+
 	if ( is_front_page() )
 		return sprintf( '%s %s %s', get_bloginfo( 'name' ), $sep, get_bloginfo( 'description' ) );
 
-	if ( ! is_feed() )
-		$title .= get_bloginfo( 'name' );
+	$title = sprintf( '%s %s', $title, get_bloginfo( 'name' ) );
+
+	if ( get_query_var('paged') > 1 )
+		$title .= sprintf( ' (%s)', sprintf( __('Page %d'), get_query_var('paged') ) );
 
 	return $title;
+
 }
 
 
