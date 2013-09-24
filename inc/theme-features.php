@@ -21,17 +21,6 @@ function tinker_head_title( $title, $sep ) {
 }
 
 
-add_action( 'wp_head', 'add_head_feed_link', 8 );
-
-function add_head_feed_link() {
-	printf(
-		'<link rel="alternate" type="application/rss+xml" title="%s" href="%s" />',
-		esc_attr( sprintf( __( '%s RSS feed', 'tinker' ), get_bloginfo('name') ) ),
-		get_bloginfo('rss2_url')
-	);
-}
-
-
 add_action( 'wp_head', 'tinker_favicon' );
 
 function tinker_favicon() {
