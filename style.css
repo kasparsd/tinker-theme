@@ -133,9 +133,7 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 .commentlist .pingback,
 .commentlist .trackback { float:left; width:100%; clear:both; display:block; margin:0.5em 0 1.5em 0; list-style:none; }
 .commentlist .pingback .comment-body,
-.commentlist .trackback .comment-body { margin-left:0; margin-top:1.5em; margin-bottom:1.5em; }
-.commentlist .pingback .url,
-.commentlist .trackback .url { font-weight:bold; }
+.commentlist .trackback .comment-body { margin-left:0; font-weight:bold; }
 .commentlist .comment-body { margin:0 0 0 80px; padding:20px; background:#fff; }
 .commentlist .comment-author img { float:left; position:relative; left:-100px; margin-right:-100px; top:-0.5em; }
 .commentlist .comment-author { font-weight:bold; }
