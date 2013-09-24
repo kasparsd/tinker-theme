@@ -126,14 +126,16 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 
 .comments-wrap { float:left; width:100%; clear:both; margin-bottom:3em; }
 .comments { }
-.comments .comments-title { margin:1em 0 1em 0; }
+.comments .comments-title {}
 
 .commentlist { float:left; width:100%; clear:both; display:block; margin:0 0 1.5em 0; padding:0; }
 .commentlist .comment,
 .commentlist .pingback,
 .commentlist .trackback { float:left; width:100%; clear:both; display:block; margin:0.5em 0 1.5em 0; list-style:none; }
 .commentlist .pingback .comment-body,
-.commentlist .trackback .comment-body { font-weight:bold; margin-left:0; margin-top:1.5em; margin-bottom:1.5em; padding:1em 0; border-top:1px solid #ddd; }
+.commentlist .trackback .comment-body { margin-left:0; margin-top:1.5em; margin-bottom:1.5em; }
+.commentlist .pingback .url,
+.commentlist .trackback .url { font-weight:bold; }
 .commentlist .comment-body { margin:0 0 0 80px; padding:20px; background:#fff; }
 .commentlist .comment-author img { float:left; position:relative; left:-100px; margin-right:-100px; top:-0.5em; }
 .commentlist .comment-author { font-weight:bold; }
