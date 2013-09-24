@@ -126,6 +126,7 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 
 .comments-wrap { float:left; width:100%; clear:both; background:#fff; margin-bottom:3em; }
 .comments { padding:0 25px; }
+.comments .comments-title { margin-top:1em; }
 #reply-title { margin-top:1em; }
 
 .commentlist { float:left; width:100%; clear:both; display:block; margin:0 0 1.5em 0; padding:0; }
