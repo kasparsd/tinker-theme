@@ -21,7 +21,8 @@ if ( comments_open() || have_comments() ) : ?>
 			<ol class="commentlist">
 				<?php 
 					wp_list_comments( array(
-							'avatar_size' => 64
+							'avatar_size' => 64,
+							'short_ping' => true
 						) ); 
 				?>
 			</ol>
