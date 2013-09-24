@@ -51,5 +51,5 @@ function tinker_theme_setup() {
 add_action( 'wp_enqueue_scripts', 'tinker_base_css' );
 
 function tinker_base_css() {
-	wp_enqueue_style( 'tinker-base-css', get_template_directory_uri() . '/style.css', null, 15 );
+	wp_enqueue_style( 'tinker-base-css', get_template_directory_uri() . '/style.css', null, 16 );
 }
