@@ -127,7 +127,6 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 .comments-wrap { float:left; width:100%; clear:both; margin-bottom:3em; }
 .comments { }
 .comments .comments-title { margin:1em 0 1em 0; }
-#reply-title { margin-top:1em; }
 
 .commentlist { float:left; width:100%; clear:both; display:block; margin:0 0 1.5em 0; padding:0; }
 .commentlist .comment,
@@ -146,7 +145,10 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 .commentlist .children { position:relative; margin:2em 0 0 25px; padding:0 0 0.5em 0; border-bottom:1px solid #fff; }
 .commentlist .children:before { display:block; content:''; width:0; height:0; border:1em solid transparent; border-top-color:#fff; float:left; position:absolute; left:100px; top:-2em; }
 
-#commentform { float:left; width:100%; clear:both; margin-bottom:1.5em; }
+#respond { float:left; width:100%; clear:both; background:#fff; }
+#reply-title { margin-top:1em; margin-left:20px; margin-bottom:1.5em; }
+
+#commentform { padding:0 20px; clear:both; margin-bottom:1.5em; }
 #commentform .comment-form-author label,
 #commentform .comment-form-email label,
 #commentform .comment-form-url label,
@@ -159,6 +161,7 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 #commentform input[type="url"],
 #commentform textarea { width:100%; font:inherit; border:1px solid #ccc; padding:0.1em 0.25em; }
 #commentform .logged-in-as { margin:0 0 1em 0; }
+#commentform .required { color:#999; }
 
 .widget ul { margin:0; padding:0; }
 .widget-title { margin-top:0; font-size:1em; }
