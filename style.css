@@ -124,9 +124,9 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 .post-pagination a { color:inherit; }
 .comments .pagination { padding-top:1em; border-top:1px solid #ddd; }
 
-.comments-wrap { float:left; width:100%; clear:both; background:#fff; margin-bottom:3em; }
-.comments { padding:0 25px; }
-.comments .comments-title { margin-top:1em; }
+.comments-wrap { float:left; width:100%; clear:both; margin-bottom:3em; }
+.comments { }
+.comments .comments-title { margin:1em 0 1em 0; }
 #reply-title { margin-top:1em; }
 
 .commentlist { float:left; width:100%; clear:both; display:block; margin:0 0 1.5em 0; padding:0; }
@@ -135,15 +135,16 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 .commentlist .trackback { float:left; width:100%; clear:both; display:block; margin:0.5em 0 1.5em 0; list-style:none; }
 .commentlist .pingback .comment-body,
 .commentlist .trackback .comment-body { font-weight:bold; margin-left:0; margin-top:1.5em; margin-bottom:1.5em; padding:1em 0; border-top:1px solid #ddd; }
-.commentlist .comment-body { margin:0 0 0 85px; }
-.commentlist .comment-author img { float:left; position:relative; left:-85px; margin-right:-85px; top:-0.5em; }
-.commentlist .comment-author { font-weight:bold; border-top:1px solid #ddd; padding-top:0.5em; }
+.commentlist .comment-body { margin:0 0 0 80px; padding:20px; background:#fff; }
+.commentlist .comment-author img { float:left; position:relative; left:-100px; margin-right:-100px; top:-0.5em; }
+.commentlist .comment-author { font-weight:bold; }
 .commentlist .comment-awaiting-moderation { display:block; font-size:0.9em; margin:0.5em 0; padding:0.5em 1em; background:#eee; }
 .commentlist .comment-meta { font-size:0.9em; margin-bottom:1.25em; }
 .commentlist .comment-meta a { color:#999; }
 .commentlist cite { font-style:normal; }
 .commentlist .reply { margin:0; font-size:0.9em; }
-.commentlist .children { margin:1.5em 0 0 0; padding:0 0 0 25px; border-left:1px solid #ddd; }
+.commentlist .children { position:relative; margin:2.5em 0 0.5em 25px; padding:0; border-bottom:1px solid #fff; }
+.commentlist .children:before { display:block; content:''; width:0; height:0; border:1em solid transparent; border-top-color:#fff; float:left; position:absolute; left:100px; top:-2.5em; }
 
 #commentform { float:left; width:100%; clear:both; margin-bottom:1.5em; }
 #commentform .comment-form-author label,
