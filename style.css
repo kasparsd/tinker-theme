@@ -194,6 +194,7 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 
 
 @media only screen and (max-width: 700px) {
+	body { font-size:15px; }
 	h1 { font-size:1.5em; }
 	h2 { font-size:1.25em; }
 	h3, h4, h5, h6 { font-size:1.15em; }
