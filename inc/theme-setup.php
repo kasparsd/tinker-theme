@@ -13,6 +13,9 @@ function tinker_theme_setup() {
 	if ( ! isset( $content_width ) ) 
 		$content_width = 650;
 
+	// Support for custom post formats
+	add_theme_support( 'post-formats', array( 'link', 'quote', 'status', 'aside', 'image', 'gallery', 'video', 'audio' ) );
+
 	// Support custom background colors and images
 	add_theme_support( 'custom-background', array( 'default-color' => 'dddddd' ) );
 
