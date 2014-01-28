@@ -3,7 +3,7 @@ Theme Name: Tinker Blog Theme
 Theme URI: http://preseto.com/themes/tinker
 GitHub URI: https://github.com/kasparsd/tinker-theme
 Description: For creators, bloggers and writers
-Version: 1.4.9
+Version: 1.5
 Author: Preseto Themes
 Author URI: http://preseto.com
 License: GNU General Public License v2 or later
@@ -55,9 +55,9 @@ dl dt { font-weight:bold; }
 .wrap-content-main,
 #content-main { float:left; width:100%; clear:both; }
 
-.breadcrumbs { display:block; font-size:0.9em; margin:0 -0.2em 1.5em 0; position:relative; left:-0.2em; }
-.breadcrumbs a { color:inherit; padding:0.5em 0.25em; }
-.breadcrumbs .breadcrumb_last { margin-left:0.25em; }
+.breadcrumb { display:block; font-size:0.9em; margin:0 -0.2em 1.5em 0; position:relative; left:-0.2em; }
+.breadcrumb a { color:inherit; padding:0.5em 0.25em; }
+.breadcrumb .breadcrumb_last { margin-left:0.25em; }
  
 #content-main article { padding:0 25px; background-color:#fff; margin-bottom:2.5em; position:relative; }
 #content-main article:after, 

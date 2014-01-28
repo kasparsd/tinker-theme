@@ -246,7 +246,7 @@ function tinklog_breadcrumb() {
 
 	// Use WordPress SEO breadcrumbs if plugin installed
 	if ( function_exists( 'yoast_breadcrumb' ) ) {
-		yoast_breadcrumb( '<p class="breadcrumbs yoast-breadcrumbs">', '</p>' );
+		yoast_breadcrumb( '<p class="breadcrumb yoast-breadcrumb" itemprop="breadcrumb">', '</p>' );
 		return;
 	}
 
@@ -282,7 +282,7 @@ function tinklog_breadcrumb() {
 
 	// Print breadcrumb if not on front page
 	if ( ! is_front_page() )
-		printf( '<p class="breadcrumbs">%s &rsaquo;</p>', implode( ' &rsaquo; ', $path ) );
+		printf( '<p class="breadcrumb" itemprop="breadcrumb">%s &rsaquo;</p>', implode( ' &rsaquo; ', $path ) );
 }
 
 
