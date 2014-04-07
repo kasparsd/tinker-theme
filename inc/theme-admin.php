@@ -75,7 +75,7 @@ $tinker_colors = array(
 			'label' => __( 'Header text', 'tinker' ),
 			'default' => '222222',
 			'css' => array( 
-				'#header, .breadcrumbs, .pagination, .wrap-footer, .archive-header, .archive-heading, .archive-header a, .comments .comments-title' => 'color',
+				'#header, .breadcrumb, .pagination, .wrap-footer, .index-header, .index-heading, .index-header a, .comments .comments-title' => 'color',
 				'#nav-main-toggle, #nav-main .sub-menu' => 'background-color'
 			)
 		),
