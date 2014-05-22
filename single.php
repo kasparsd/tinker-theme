@@ -19,7 +19,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php do_action( 'after_post_title' ) ?>
 
 		<div class="entry-content">
-			<?php get_template_part( 'content', get_post_type() );  ?>
+			<?php get_template_part( 'content', get_post_format() );  ?>
 		</div>
 		
 		<?php do_action( 'post_footer' ); ?>
