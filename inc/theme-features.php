@@ -14,7 +14,7 @@ function tinker_head_title( $title, $sep ) {
 	$title = sprintf( '%s %s', $title, get_bloginfo( 'name' ) );
 
 	if ( get_query_var('paged') > 1 )
-		$title .= sprintf( ' (%s)', sprintf( __('Page %d'), get_query_var('paged') ) );
+		$title .= sprintf( ' (%s)', sprintf( __( 'Page %d', 'tinker' ), get_query_var('paged') ) );
 
 	return $title;
 
