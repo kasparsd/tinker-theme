@@ -8,7 +8,7 @@ Author: Preseto Themes
 Author URI: http://preseto.com
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: light, one-column, custom-header, custom-menu, featured-images, microformats, post-formats, custom-colors, theme-options, background, translation-ready, blog, threaded-comments, responsive
+Tags: light, one-column, custom-header, custom-menu, custom-fonts, featured-images, microformats, post-formats, custom-colors, theme-options, translation-ready, threaded-comments, editor-style
 */
 
 body { font:16px/1.5 sans-serif; color:#333; margin:0; padding:0 1em; background:#ddd; }
@@ -22,6 +22,7 @@ h1 { font-size:2em; margin-top:0; }
 a { color:#386FA5; text-decoration:none; }
 a:hover { text-decoration:underline; }
 a img { border:none; }
+hr { background-color: #ccc; border: 0; height: 1px; margin-bottom: 1.25em; }
 form, input, textarea { font:inherit; }
 object, iframe { max-width:100%; }
 table { text-align:left; border-collapse:collapse; width:100%; }
@@ -145,6 +146,7 @@ article .entry-title a { color:inherit; margin-left:-25px; margin-right:-25px; p
 .commentlist .reply { margin:0; font-size:0.9em; }
 .commentlist .children { position:relative; margin:2em 0 0 25px; padding:0 0 0.5em 0; border-bottom:1px solid #fff; }
 .commentlist .children:before { display:block; content:''; width:0; height:0; border:1em solid transparent; border-top-color:#fff; float:left; position:absolute; left:100px; top:-2em; }
+.commentlist .bypostauthor .comment-body { border-right:thick solid; }
 
 #respond { float:left; width:100%; clear:both; background:#fff; }
 #reply-title { margin-top:1em; margin-left:20px; margin-bottom:1.5em; }
