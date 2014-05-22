@@ -1,16 +1,16 @@
 <?php
 
 // After theme setup, basic enqueues, theme properties
-include 'inc/theme-setup.php';
+include get_template_directory() . '/inc/theme-setup.php';
 
 // Theme elements, post meta data, pagination
-include 'inc/theme-parts.php';
+include get_template_directory() . '/inc/theme-parts.php';
 
 // Only menus
-include 'inc/theme-menus.php';
+include get_template_directory() . '/inc/theme-menus.php';
 
 // Nice to have
-include 'inc/theme-features.php';
+include get_template_directory() . '/inc/theme-features.php';
 
 // Theme options
-include 'inc/theme-admin.php';
+include get_template_directory() . '/inc/theme-admin.php';
