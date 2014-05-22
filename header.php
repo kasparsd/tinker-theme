@@ -4,12 +4,14 @@
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<title><?php wp_title( '&mdash;', true, 'right' ); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php wp_head(); ?>
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script><![endif]-->
 </head>
 <body <?php body_class(); ?>>
 <div id="soul">
-	
+
 <div class="wrap wrap-header">
 	<nav id="header" role="navigation">
 		<?php do_action( 'header_before' ); ?>
