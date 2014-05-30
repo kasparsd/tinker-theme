@@ -238,9 +238,9 @@ function maybe_add_tinker_blog_avatar() {
 /**
  * Add breadcrumbs
  */
-add_action( 'content_before', 'tinklog_breadcrumb' );
+add_action( 'content_before', 'tinker_breadcrumb' );
 
-function tinklog_breadcrumb() {
+function tinker_breadcrumb() {
 	$path = array();
 	$page_ancestors = null;
 
@@ -289,9 +289,9 @@ function tinklog_breadcrumb() {
 /**
  * Add pagination to all index/archive pages
  */
-add_action( 'content_after', 'tinklog_pagination' );
+add_action( 'content_after', 'tinker_pagination' );
 
-function tinklog_pagination() {
+function tinker_pagination() {
 	global $wp_query, $paged;
 
 	if ( ! $wp_query->max_num_pages || is_404() )
