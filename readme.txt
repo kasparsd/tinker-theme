@@ -1,1 +1,0 @@
-Visit http://preseto.com/tinker for theme documentation or check out the /docs folder for a PDF.
