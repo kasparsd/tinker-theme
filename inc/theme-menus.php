@@ -1,9 +1,9 @@
 <?php
 
 
-add_action( 'header_after', 'add_main_menu' );
+add_action( 'header_after', 'tinker_add_main_menu' );
 
-function add_main_menu() {
+function tinker_add_main_menu() {
 	$menu = wp_nav_menu( array( 
 				'theme_location' => 'main_menu',
 				'container_id' => 'nav-main',
