@@ -38,24 +38,24 @@ function tinker_favicon() {
 }
 
 
-add_action( 'wp_head', 'make_search_notfound_noindex' );
+add_action( 'wp_head', 'tinker_make_search_notfound_noindex' );
 
-function make_search_notfound_noindex() {
+function tinker_make_search_notfound_noindex() {
 	if ( is_search() || is_404() )
 		echo '<meta name="robots" content="noindex" />';
 }
 
 
-add_filter( 'previous_posts_link_attributes', 'base_pagination_rel_prev' );
+add_filter( 'previous_posts_link_attributes', 'tinker_base_pagination_rel_prev' );
 
-function base_pagination_rel_prev() {
+function tinker_base_pagination_rel_prev() {
 	return 'rel="prev"';
 }
 
 
-add_filter( 'next_posts_link_attributes', 'base_pagination_rel_next' );
+add_filter( 'next_posts_link_attributes', 'tinker_base_pagination_rel_next' );
 
-function base_pagination_rel_next() {
+function tinker_base_pagination_rel_next() {
 	return 'rel="next"';
 }
 
