@@ -4,9 +4,9 @@
 /**
  * Add a submenu item under Appearance as WordPress 3.5 doesn't add this by default.
  */
-add_action( 'admin_menu', 'maybe_add_theme_customizer_menu' );
+add_action( 'admin_menu', 'tinker_maybe_add_theme_customizer_menu' );
 
-function maybe_add_theme_customizer_menu() {
+function tinker_maybe_add_theme_customizer_menu() {
 	global $wp_version;
 	
 	if ( version_compare( '3.6', $wp_version ) )
