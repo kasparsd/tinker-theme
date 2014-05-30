@@ -33,6 +33,7 @@ The following resources are not included with the theme but are external resourc
 The following resources are included within the theme package.
 
 * [HTML5 Shiv](http://code.google.com/p/html5shiv/) licensed under the [MIT License](http://opensource.org/licenses/MIT)
+* Images in screenshot from [Little Visuals](http://littlevisuals.co/) licensed under [Public Domain](http://creativecommons.org/publicdomain/zero/1.0/)
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
@@ -42,4 +43,7 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 ## Changelog
 
 ### 1.5.6
-- First public realease.
+
+- Initial public realease.
+
+
