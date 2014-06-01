@@ -24,7 +24,7 @@ $tinker_filters = array(
 			'label' => __( 'Show Gravatar image in the header', 'tinker' ),
 			'default' => true
 		),
-		'tinklog_breadcrumb' => array( 
+		'tinker_breadcrumb' => array( 
 			'hook' => 'content_before', 
 			'label' => __( 'Enable breadcrumbs', 'tinker' ),
 			'default' => true
